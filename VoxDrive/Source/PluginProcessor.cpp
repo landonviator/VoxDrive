@@ -20,12 +20,51 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
                        )
+, treeState(*this, nullptr, "PARAMETERS", createParameterLayout())
 #endif
 {
+    treeState.addParameterListener(inputID, this);
+    treeState.addParameterListener(cutoffID, this);
+    treeState.addParameterListener(mixID, this);
+    treeState.addParameterListener(lowpassID, this);
 }
 
 VoxDriveAudioProcessor::~VoxDriveAudioProcessor()
 {
+    treeState.removeParameterListener(inputID, this);
+    treeState.removeParameterListener(cutoffID, this);
+    treeState.removeParameterListener(mixID, this);
+    treeState.removeParameterListener(lowpassID, this);
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::createParameterLayout()
+{
+    std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
+        
+    auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, -24.0f, 24.0f, 0.0f);
+    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.3), 0.0f);
+    auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 0);
+    auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.2), 0.0f);
+    
+    params.push_back(std::move(pInput));
+    params.push_back(std::move(pCutoff));
+    params.push_back(std::move(pMix));
+    params.push_back(std::move(pLowpass));
+    
+    return { params.begin(), params.end() };
+}
+
+void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, float newValue)
+{
+    updateParameters();
+}
+
+void VoxDriveAudioProcessor::updateParameters()
+{
+    DBG(treeState.getRawParameterValue(inputID)->load());
+    DBG(treeState.getRawParameterValue(cutoffID)->load());
+    DBG(treeState.getRawParameterValue(mixID)->load());
+    DBG(treeState.getRawParameterValue(lowpassID)->load());
 }
 
 //==============================================================================
@@ -135,27 +174,7 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        buffer.clear (i, 0, buffer.getNumSamples());
-
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
-
-        // ..do something to the data...
-    }
+    
 }
 
 //==============================================================================
@@ -166,7 +185,8 @@ bool VoxDriveAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* VoxDriveAudioProcessor::createEditor()
 {
-    return new VoxDriveAudioProcessorEditor (*this);
+    //return new VoxDriveAudioProcessorEditor (*this);
+    return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================
