@@ -132,8 +132,12 @@ void VoxDriveAudioProcessor::changeProgramName (int index, const juce::String& n
 //==============================================================================
 void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    // Initialize spec for dsp modules
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.sampleRate = sampleRate;
+    spec.numChannels = getTotalNumOutputChannels();
+    
+    voxDistortionModule.prepare(spec);
 }
 
 void VoxDriveAudioProcessor::releaseResources()
@@ -174,7 +178,9 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+    juce::dsp::AudioBlock<float> audioBlock {buffer};
     
+    voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
 }
 
 //==============================================================================

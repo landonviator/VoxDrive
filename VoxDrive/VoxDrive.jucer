@@ -40,7 +40,11 @@
         <FILE id="P6BqbN" name="slider_vertical.png" compile="0" resource="1"
               file="Source/Assets/slider_vertical.png"/>
       </GROUP>
-      <GROUP id="{B8727BBB-6BA8-C486-6D81-61ED6009359A}" name="DSP"/>
+      <GROUP id="{B8727BBB-6BA8-C486-6D81-61ED6009359A}" name="DSP">
+        <FILE id="CDnNnP" name="VoxDistortion.cpp" compile="1" resource="0"
+              file="Source/DSP/VoxDistortion.cpp"/>
+        <FILE id="WPCefs" name="VoxDistortion.h" compile="0" resource="0" file="Source/DSP/VoxDistortion.h"/>
+      </GROUP>
       <GROUP id="{28CD7EB6-156E-3525-BE91-A0C89BB020B0}" name="Parameters">
         <FILE id="rkAbNw" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters/Parameters.cpp"/>
         <FILE id="mTu4hM" name="Parameters.h" compile="0" resource="0" file="Source/Parameters/Parameters.h"/>

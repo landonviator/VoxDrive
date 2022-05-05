@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "./Parameters/Parameters.h"
+#include "./DSP/VoxDistortion.h"
 
 //==============================================================================
 /**
@@ -77,6 +78,10 @@ public:
 private:
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;
+    
+    /** DSP */
+    VoxDistortion<float> voxDistortionModule;
+    juce::dsp::ProcessSpec spec;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessor)
 };
