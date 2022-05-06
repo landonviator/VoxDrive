@@ -21,6 +21,10 @@ void VoxDistortion<SampleType>::prepare(juce::dsp::ProcessSpec &spec)
 {
     mSampleRate = spec.sampleRate;
     reset();
+    
+    bandFilter.prepare(spec);
+    bandFilter.setType(juce::dsp::LinkwitzRileyFilterType::highpass);
+    bandFilter.setCutoffFrequency(mCutoff.getNextValue());
 }
 
 template <typename SampleType>
@@ -31,6 +35,12 @@ void VoxDistortion<SampleType>::reset() noexcept
         mDrive.reset(mSampleRate, 0.02);
         mDrive.setTargetValue(0.0);
         setDrive(mDrive.getNextValue());
+        
+        mCutoff.reset(mSampleRate, 0.02);
+        mCutoff.setTargetValue(500.0f);
+        
+        mMix.reset(mSampleRate, 0.02);
+        mMix.setTargetValue(1.0f);
     }
 }
 
@@ -38,6 +48,19 @@ template <typename SampleType>
 void VoxDistortion<SampleType>::setDrive(SampleType newDrive)
 {
     mDrive.setTargetValue(juce::Decibels::decibelsToGain(newDrive));
+}
+
+template <typename SampleType>
+void VoxDistortion<SampleType>::setCutoff(SampleType newCutoff)
+{
+    mCutoff.setTargetValue(newCutoff);
+}
+
+template <typename SampleType>
+void VoxDistortion<SampleType>::setMix(SampleType newMix)
+{
+    auto mixScaled = juce::jmap(static_cast<float>(newMix), 0.0f, 100.0f, 0.0f, 1.0f);
+    mMix.setTargetValue(mixScaled);
 }
 
 template class VoxDistortion<float>;

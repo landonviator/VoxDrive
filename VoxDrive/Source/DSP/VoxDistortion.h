@@ -42,21 +42,43 @@ public:
             
             for (size_t sample = 0; sample < len; ++sample)
             {
-                output[sample] = processSample(input[sample]);
+                output[sample] = processSample(input[sample], channel);
             }
         }
     }
     
-    SampleType processSample(SampleType newInput)
+    SampleType processSample(SampleType newInput, int ch)
     {
-        return piDivisor * std::atan(newInput * mDrive.getNextValue());
+        float lowBand;
+        float highBand;
+        
+        bandFilter.setCutoffFrequency(mCutoff.getNextValue());
+        bandFilter.processSample(ch, newInput, lowBand, highBand);
+        
+        auto highDistort = piDivisor * std::atan(highBand * mDrive.getNextValue());
+        
+        highDistort *= 1.75;
+        
+        highDistort *= juce::Decibels::decibelsToGain(-mDrive.getNextValue());
+        
+        auto output = lowBand + highDistort;
+        
+        return (1.0 - mMix.getNextValue()) * newInput + mMix.getNextValue() * output;
     }
     
     void setDrive(SampleType newDrive);
     
+    void setCutoff(SampleType newCutoff);
+    
+    void setMix(SampleType newMix);
+    
 private:
     float mSampleRate;
     juce::SmoothedValue<float> mDrive;
+    juce::SmoothedValue<float> mCutoff;
+    juce::SmoothedValue<float> mMix;
     
     static constexpr float piDivisor = 2.0 / juce::MathConstants<float>::pi;
+    
+    juce::dsp::LinkwitzRileyFilter<float> bandFilter;
 };

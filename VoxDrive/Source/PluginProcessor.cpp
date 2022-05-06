@@ -42,8 +42,8 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
         
     auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, -24.0f, 24.0f, 0.0f);
-    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.3), 0.0f);
-    auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 0);
+    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.3), 500.0f);
+    auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
     auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.2), 0.0f);
     
     params.push_back(std::move(pInput));
@@ -61,10 +61,9 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
 
 void VoxDriveAudioProcessor::updateParameters()
 {
-    DBG(treeState.getRawParameterValue(inputID)->load());
-    DBG(treeState.getRawParameterValue(cutoffID)->load());
-    DBG(treeState.getRawParameterValue(mixID)->load());
-    DBG(treeState.getRawParameterValue(lowpassID)->load());
+    voxDistortionModule.setDrive(treeState.getRawParameterValue(inputID)->load());
+    voxDistortionModule.setCutoff(treeState.getRawParameterValue(cutoffID)->load());
+    voxDistortionModule.setMix(treeState.getRawParameterValue(mixID)->load());
 }
 
 //==============================================================================
@@ -138,6 +137,7 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     spec.numChannels = getTotalNumOutputChannels();
     
     voxDistortionModule.prepare(spec);
+    updateParameters();
 }
 
 void VoxDriveAudioProcessor::releaseResources()
