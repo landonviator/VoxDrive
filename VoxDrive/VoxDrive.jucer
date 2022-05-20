@@ -4,6 +4,10 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="O12BMG" name="VoxDrive">
     <GROUP id="{99FC07AC-F8D0-2F17-656E-A0A2063E6628}" name="Source">
+      <GROUP id="{74024A05-720C-64F7-9193-4312CF5F502F}" name="LookAndFeel">
+        <FILE id="TMwR2N" name="DialLAF.cpp" compile="1" resource="0" file="Source/LookAndFeel/DialLAF.cpp"/>
+        <FILE id="yWGLcs" name="DialLAF.h" compile="0" resource="0" file="Source/LookAndFeel/DialLAF.h"/>
+      </GROUP>
       <GROUP id="{704732CF-5310-B08E-2E59-B244BD06AECE}" name="Assets">
         <FILE id="rAN5fs" name="Articulations_back.png" compile="0" resource="1"
               file="Source/Assets/Articulations_back.png"/>

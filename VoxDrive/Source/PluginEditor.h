@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "./LookAndFeel/DialLAF.h"
 
 //==============================================================================
 /**
@@ -36,6 +37,20 @@ private:
     void uiResized();
     void saveWindowSize();
     bool constructorFinished = false;
+    
+    juce::Slider inputDial;
+    juce::Slider cutoffDial;
+    juce::Slider mixDial;
+    juce::Slider lowpassDial;
+    
+    juce::Slider fader;
+    
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> inputDialAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> cutoffDialAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> mixDialAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> lowpassDialAttach;
+    
+    CustomDial customDialLAF;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };

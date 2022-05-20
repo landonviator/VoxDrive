@@ -12,7 +12,7 @@
 
 void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
 {
-    // Background
-    auto background = juce::ImageCache::getFromMemory(BinaryData::background_png, BinaryData::background_pngSize);
-    g.drawImageWithin(background, 0, 0, getWidth(), getHeight(), juce::RectanglePlacement::stretchToFit);
+    juce::Rectangle<int> background = getLocalBounds();
+    g.setGradientFill(juce::ColourGradient::vertical(juce::Colour::fromFloatRGBA(0.18f, 0.20f, 0.24f, 1.0), 300 * .01, juce::Colour::fromFloatRGBA(0.12f, 0.14f, 0.18f, 1.0), 300 * .99));
+    g.fillRect(background);
 }

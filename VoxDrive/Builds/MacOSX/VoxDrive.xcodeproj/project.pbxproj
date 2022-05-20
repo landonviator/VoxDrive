@@ -68,6 +68,7 @@
 		C34C244EB476CF3FF7242B99 /* include_juce_audio_basics.mm */ = {isa = PBXBuildFile; fileRef = CD834EC7A70E2E0D61272E6F; };
 		C3B56222CD6249BD2A24784E /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = 08BECCAF5466C1EE1232A93F; };
 		C4316B1424B8E665C4731F5D /* RecentFilesMenuTemplate.nib */ = {isa = PBXBuildFile; fileRef = 7BBB4C2B7D3B511CBCFFD09F; };
+		C78290209D03EF1C08A8569D /* DialLAF.cpp */ = {isa = PBXBuildFile; fileRef = B54D4D93B0D5BA23736B19DB; };
 		CBCE694CD2332071C9305732 /* BinaryData.cpp */ = {isa = PBXBuildFile; fileRef = FA47F42FB2143859F6CDD8BC; };
 		DBD51E84C6703FA7438F728B /* OversamplingMenu.cpp */ = {isa = PBXBuildFile; fileRef = 7979B692382A6D00E4FF0DD4; };
 		DEACD9FFEF1BE62421DC9AB1 /* include_juce_audio_plugin_client_utils.cpp */ = {isa = PBXBuildFile; fileRef = DF2008CCFE7B5BF9F273B5DA; };
@@ -116,6 +117,7 @@
 		6D4A54C4A9EC4D1857FA8295 /* AudioUnit.framework */ /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		6DACF05563D6950F3A4D6C3C /* Cocoa.framework */ /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6F6F31B4CFA531FD71FA929B /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = /Users/land00m/Documents/GitHub/JUCE/modules/juce_data_structures; sourceTree = "<absolute>"; };
+		714B22E6BDF433092DE8CD6F /* DialLAF.h */ /* DialLAF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DialLAF.h; path = ../../Source/LookAndFeel/DialLAF.h; sourceTree = SOURCE_ROOT; };
 		7979B692382A6D00E4FF0DD4 /* OversamplingMenu.cpp */ /* OversamplingMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OversamplingMenu.cpp; path = "../../Source/UI-Methods/OversamplingMenu.cpp"; sourceTree = SOURCE_ROOT; };
 		7BBB4C2B7D3B511CBCFFD09F /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
 		7C5D1E6716F7B755DB535EF0 /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
@@ -142,6 +144,7 @@
 		B2F6A81589126C4651592A01 /* BinaryData4.cpp */ /* BinaryData4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData4.cpp; path = ../../JuceLibraryCode/BinaryData4.cpp; sourceTree = SOURCE_ROOT; };
 		B3572FDBA514B995389B662A /* Carbon.framework */ /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		B3D49C5A0B019E67390D0C90 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = /Users/land00m/Documents/GitHub/JUCE/modules/juce_audio_devices; sourceTree = "<absolute>"; };
+		B54D4D93B0D5BA23736B19DB /* DialLAF.cpp */ /* DialLAF.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DialLAF.cpp; path = ../../Source/LookAndFeel/DialLAF.cpp; sourceTree = SOURCE_ROOT; };
 		B5760866FB8E554519917889 /* CoreAudio.framework */ /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		BA882870B9E5A4EDA2E50340 /* UI-Resized.cpp */ /* UI-Resized.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "UI-Resized.cpp"; path = "../../Source/UI-Methods/UI-Resized.cpp"; sourceTree = SOURCE_ROOT; };
 		BD3D0B1022A5838CA9E859FD /* background.png */ /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../Source/Assets/background.png; sourceTree = SOURCE_ROOT; };
@@ -256,6 +259,7 @@
 		12A4F9CA1C74DC4E6234FADB /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F4320139153606F1A7430AF4,
 				9DA7249E67BF975FE8AD845C,
 				555BBC2B01011C30D09BD0D2,
 				3584A3AFC06844C7939249A0,
@@ -409,6 +413,15 @@
 				9505198401212B366ADA4F86,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4320139153606F1A7430AF4 /* LookAndFeel */ = {
+			isa = PBXGroup;
+			children = (
+				B54D4D93B0D5BA23736B19DB,
+				714B22E6BDF433092DE8CD6F,
+			);
+			name = LookAndFeel;
 			sourceTree = "<group>";
 		};
 		FABAF572486D627DAD668E48 /* JUCE Modules */ = {
@@ -689,6 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78290209D03EF1C08A8569D,
 				388E432B460D37810E26FB02,
 				0C0792E6838A811D07225518,
 				DBD51E84C6703FA7438F728B,

@@ -16,7 +16,7 @@ void VoxDriveAudioProcessorEditor::initWindow()
     juce::Rectangle<int> r = juce::Desktop::getInstance().getDisplays().getPrimaryDisplay()->userArea;
     
     // Using the width is more useful than the height, because we know the height will always be < than width
-    int x = r.getWidth();
+    int x = r.getWidth() * 0.6;
     
     auto width = 0;
     
@@ -30,12 +30,12 @@ void VoxDriveAudioProcessorEditor::initWindow()
         width = x * 0.5;
     }
     
-    auto height = width * 0.7;
+    auto height = width * 0.5;
     
     //Making the window resizable by aspect ratio and setting size
     AudioProcessorEditor::setResizable(true, true);
     AudioProcessorEditor::setResizeLimits(width * 0.75, height * 0.75, width * 1.25, height * 1.25);
-    AudioProcessorEditor::getConstrainer()->setFixedAspectRatio(1.43);
+    AudioProcessorEditor::getConstrainer()->setFixedAspectRatio(2.0);
     
     if (audioProcessor.windowWidth != 0.0)
     {

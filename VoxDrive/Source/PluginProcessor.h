@@ -55,7 +55,6 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
     
-    juce::AudioProcessorValueTreeState treeState;
     
     juce::ValueTree variableTree
     { "Variables", {},
@@ -74,7 +73,9 @@ public:
     float windowHeight {0.0f};
     
     void updateParameters();
-
+    
+    juce::AudioProcessorValueTreeState treeState;
+    
 private:
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;

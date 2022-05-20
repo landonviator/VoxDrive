@@ -41,10 +41,10 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
 {
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
         
-    auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, -24.0f, 24.0f, 0.0f);
-    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.3), 500.0f);
+    auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, 0.0f, 24.0f, 0.0f);
+    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 0.0f);
     auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
-    auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.2), 0.0f);
+    auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.5), 20000.0f);
     
     params.push_back(std::move(pInput));
     params.push_back(std::move(pCutoff));
@@ -62,8 +62,18 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
 void VoxDriveAudioProcessor::updateParameters()
 {
     voxDistortionModule.setDrive(treeState.getRawParameterValue(inputID)->load());
+    
+    //auto newCutoff = juce::jmap(treeState.getRawParameterValue(cutoffID)->load(), 0.0f, 100.0f, 500.0f, 20000.0f);
+    //voxDistortionModule.setCutoff(newCutoff);
+    
+    DBG("Input: " << treeState.getRawParameterValue(inputID)->load());
+    DBG("Cutoff: " << treeState.getRawParameterValue(cutoffID)->load());
+    DBG("Mix: " << treeState.getRawParameterValue(mixID)->load());
+    DBG("Lowpass: " << treeState.getRawParameterValue(lowpassID)->load());
+    
     voxDistortionModule.setCutoff(treeState.getRawParameterValue(cutoffID)->load());
     voxDistortionModule.setMix(treeState.getRawParameterValue(mixID)->load());
+    voxDistortionModule.setLPCutoff(treeState.getRawParameterValue(lowpassID)->load());
 }
 
 //==============================================================================
@@ -191,8 +201,8 @@ bool VoxDriveAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* VoxDriveAudioProcessor::createEditor()
 {
-    //return new VoxDriveAudioProcessorEditor (*this);
-    return new juce::GenericAudioProcessorEditor (*this);
+    return new VoxDriveAudioProcessorEditor (*this);
+    //return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================

@@ -61,7 +61,9 @@ public:
         
         highDistort *= juce::Decibels::decibelsToGain(-mDrive.getNextValue());
         
-        auto output = lowBand + highDistort;
+        lpFilter.setCutoffFrequency(mLPCutoff.getNextValue());
+        
+        auto output = lowBand + lpFilter.processSample(ch, highDistort);
         
         return (1.0 - mMix.getNextValue()) * newInput + mMix.getNextValue() * output;
     }
@@ -72,13 +74,17 @@ public:
     
     void setMix(SampleType newMix);
     
+    void setLPCutoff(SampleType newCutoff);
+    
 private:
     float mSampleRate;
     juce::SmoothedValue<float> mDrive;
     juce::SmoothedValue<float> mCutoff;
     juce::SmoothedValue<float> mMix;
+    juce::SmoothedValue<float> mLPCutoff;
     
     static constexpr float piDivisor = 2.0 / juce::MathConstants<float>::pi;
     
     juce::dsp::LinkwitzRileyFilter<float> bandFilter;
+    juce::dsp::LinkwitzRileyFilter<float> lpFilter;
 };

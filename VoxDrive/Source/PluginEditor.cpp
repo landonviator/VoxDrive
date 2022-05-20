@@ -18,6 +18,7 @@ VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcess
 
 VoxDriveAudioProcessorEditor::~VoxDriveAudioProcessorEditor()
 {
+    inputDial.setLookAndFeel(nullptr);
 }
 
 //==============================================================================
