@@ -1,13 +1,3 @@
-/*
-  ==============================================================================
-
-    UI-Paint.cpp
-    Created: 24 Oct 2021 1:41:00am
-    Author:  Landon Viator
-
-  ==============================================================================
-*/
-
 #include "../PluginEditor.h"
 
 void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
@@ -16,7 +6,7 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     
     auto scale = 0.85f;
     auto leftMargin = getWidth() * (1.0 - scale) * 0.5;
-    auto topMargin = getHeight() * (1.0 - scale) * 0.5;
+    auto topMargin = getHeight() * (1.0 - scale * 0.9f) * 0.5;
     
     // Background
     auto background = juce::ImageCache::getFromMemory(BinaryData::background_png, BinaryData::background_pngSize);

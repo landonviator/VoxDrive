@@ -19,10 +19,15 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     startTimerHz(30);
     
-    addAndMakeVisible(largeDial);
+    //Init color
+    masterColor = juce::Colour::fromString(audioProcessor.variableTree.getProperty("mastercolor").toString());
     
-    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::backgroundColourId, juce::Colour::fromRGB(54, 57, 63));
-    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::outlineColourId, juce::Colour::fromRGB(0, 0, 0));
+    addAndMakeVisible(largeDial);
+    largeDial.setTooltip("This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion.");
+    
+    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::backgroundColourId, juce::Colour::fromRGB(0, 0, 0));
+    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::outlineColourId, juce::Colours::whitesmoke.withAlpha(0.5f));
+    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.75f));
     
     addAndMakeVisible(headerComponent);
     

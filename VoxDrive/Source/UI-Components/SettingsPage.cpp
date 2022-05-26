@@ -3,7 +3,7 @@
 
 //==============================================================================
 
-SettingsPage::SettingsPage()
+SettingsPage::SettingsPage(VoxDriveAudioProcessor& p) : audioProcessor(p), masterColorComp(audioProcessor)
 {
     setName("Settings Page");
     addAndMakeVisible(tooltipSettingsComp);

@@ -2,19 +2,22 @@
 #include <JuceHeader.h>
 #include "../../LookAndFeel/ColorButtonLAF.h"
 #include "../../Globals.h"
+#include "../../PluginProcessor.h"
 
 //==============================================================================
 
 class MasterColorComp  : public juce::Component
 {
 public:
-    MasterColorComp();
+    MasterColorComp(VoxDriveAudioProcessor&);
     ~MasterColorComp() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
+    VoxDriveAudioProcessor& audioProcessor;
+    
     juce::TextButton redButton;
     juce::TextButton greenButton;
     juce::TextButton blueButton;

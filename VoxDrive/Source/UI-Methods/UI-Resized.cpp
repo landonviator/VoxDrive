@@ -12,7 +12,7 @@
 
 void VoxDriveAudioProcessorEditor::uiResized()
 {
-    topMargin = getHeight() * 0.05;
+    topMargin = getHeight() * 0.06;
     
     //Header
     headerComponent.setBounds(0, 0, getWidth(), topMargin);
@@ -34,15 +34,5 @@ void VoxDriveAudioProcessorEditor::setSettingsPageBounds()
     
     headerComponent.getSettingsButtonToggleState() ? settingsPage.setBounds(settingsPageBounds) : settingsPage.setBounds(settingsPageOutBounds);
     
-//    if (headerComponent.getSettingsButtonToggleState())
-//    {
-//        settingsPageAnimator.animateComponent(&settingsPage, settingsPageBounds, 1.0f, 250, false, 1.0, 1.0);
-//    }
-//
-//    else
-//    {
-//        settingsPageAnimator.animateComponent(&settingsPage, settingsPageOutBounds, 1.0f, 250, false, 1.0, 1.0);
-//    }
-    
-    largeDial.setBounds(getLocalBounds().withSizeKeepingCentre(getWidth() * 0.25, getWidth() * 0.25));
+    largeDial.setBounds(getLocalBounds().withSizeKeepingCentre(getWidth() * 0.25, getWidth() * 0.25).withY(getWidth() * 0.18f));
 }

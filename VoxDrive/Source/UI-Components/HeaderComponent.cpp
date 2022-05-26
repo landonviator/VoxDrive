@@ -34,7 +34,7 @@ void HeaderComponent::paint (juce::Graphics& g)
     // Logo laye
     auto headerLogo = juce::ImageCache::getFromMemory(BinaryData::landon5504_png, BinaryData::landon5504_pngSize);
     g.drawImageWithin(headerLogo,
-                      getWidth() * -0.24f,
+                      getWidth() * -0.22f,
                       getHeight() * 0.2f,
                       getWidth() * 0.6f,
                       getHeight() * 0.65f,

@@ -198,7 +198,6 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     
     cpuLoad.store(cpuMeasureModule.getLoadAsPercentage());
-
 }
 
 float VoxDriveAudioProcessor::getCPULoad()

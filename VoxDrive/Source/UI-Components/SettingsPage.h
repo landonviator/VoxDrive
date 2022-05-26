@@ -13,13 +13,15 @@
 class SettingsPage  : public juce::Component
 {
 public:
-    SettingsPage();
+    SettingsPage(VoxDriveAudioProcessor&);
     ~SettingsPage() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
     bool getShouldUseToolTips();
 private:
+    
+    VoxDriveAudioProcessor& audioProcessor;
     
     juce::Slider menuSlider1;
     MenuSliderLAF customMenuSlider;

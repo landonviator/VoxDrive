@@ -11,9 +11,9 @@
 
 //==============================================================================
 VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p)
-, headerComponent(audioProcessor)
-, largeDial(2, " dB", "Dial")
+: AudioProcessorEditor (&p), audioProcessor (p), headerComponent(audioProcessor)
+, settingsPage(audioProcessor)
+, largeDial(2, " dB", "Drive")
 {
     uiConstructor();
 }

@@ -3,7 +3,7 @@
 
 //==============================================================================
 
-MasterColorComp::MasterColorComp()
+MasterColorComp::MasterColorComp(VoxDriveAudioProcessor& p) : audioProcessor(p)
 {
     /** Color Button Red */
     addAndMakeVisible(redButton);
@@ -11,6 +11,8 @@ MasterColorComp::MasterColorComp()
     redButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(214, 87, 69);
+        juce::String red = juce::Colour::fromRGB(214, 87, 69).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", red, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
@@ -22,6 +24,8 @@ MasterColorComp::MasterColorComp()
     greenButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(101, 202, 122).withAlpha(0.75f);
+        juce::String green = juce::Colour::fromRGB(101, 202, 122).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", green, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     greenButton.setLookAndFeel(&customColorButtonLAF);
@@ -32,6 +36,8 @@ MasterColorComp::MasterColorComp()
     blueButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(82, 150, 213);
+        juce::String blue = juce::Colour::fromRGB(82, 150, 213).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", blue, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
@@ -43,6 +49,8 @@ MasterColorComp::MasterColorComp()
     orangeButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(216, 131, 59);
+        juce::String orange = juce::Colour::fromRGB(216, 131, 59).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", orange, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
@@ -54,6 +62,8 @@ MasterColorComp::MasterColorComp()
     yellowButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(234, 198, 69).withAlpha(0.9f);
+        juce::String yellow = juce::Colour::fromRGB(234, 198, 69).withAlpha(0.9f).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", yellow, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
@@ -65,6 +75,8 @@ MasterColorComp::MasterColorComp()
     purpleButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(146, 92, 177);
+        juce::String purple = juce::Colour::fromRGB(146, 92, 177).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", purple, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
@@ -76,6 +88,8 @@ MasterColorComp::MasterColorComp()
     asphaltButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(56, 72, 92);
+        juce::String asphalt = juce::Colour::fromRGB(56, 72, 92).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", asphalt, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
@@ -87,6 +101,8 @@ MasterColorComp::MasterColorComp()
     blackButton.onClick = [this]()
     {
         masterColor = juce::Colour::fromRGB(0, 0, 0);
+        juce::String black = juce::Colour::fromRGB(0, 0, 0).toString();
+        audioProcessor.variableTree.setProperty("mastercolor", black, nullptr);
         getParentComponent()->getParentComponent()->repaint();
     };
     
