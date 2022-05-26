@@ -12,7 +12,16 @@
 
 void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
 {
-    juce::Rectangle<int> background = getLocalBounds();
-    g.setGradientFill(juce::ColourGradient::vertical(juce::Colour::fromFloatRGBA(0.18f, 0.20f, 0.24f, 1.0), 300 * .01, juce::Colour::fromFloatRGBA(0.12f, 0.14f, 0.18f, 1.0), 300 * .99));
-    g.fillRect(background);
+    g.fillAll(juce::Colours::black);
+    
+    auto scale = 0.85f;
+    auto leftMargin = getWidth() * (1.0 - scale) * 0.5;
+    auto topMargin = getHeight() * (1.0 - scale) * 0.5;
+    
+    // Background
+    auto background = juce::ImageCache::getFromMemory(BinaryData::background_png, BinaryData::background_pngSize);
+    g.drawImageWithin(background, leftMargin, topMargin, getWidth() * scale, getHeight() * scale, juce::RectanglePlacement::stretchToFit);
+    
+    largeDial.updateLabelColor(masterColor);
+    headerComponent.repaint();
 }

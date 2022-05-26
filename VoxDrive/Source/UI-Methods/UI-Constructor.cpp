@@ -15,32 +15,17 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     // Window
     initWindow();
     
-    addAndMakeVisible(inputDial);
-    inputDial.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    inputDial.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 36);
-    inputDial.setRange(0.0, 24.0, 0.01);
-    inputDial.setLookAndFeel(&customDialLAF);
-    inputDialAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputID, inputDial);
+    setName("Editor");
     
-    addAndMakeVisible(cutoffDial);
-    cutoffDial.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    cutoffDial.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 36);
-    cutoffDial.setRange(500.0, 20000.0, 1.0);
-    cutoffDialAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, cutoffDial);
+    startTimerHz(30);
     
-    addAndMakeVisible(mixDial);
-    mixDial.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    mixDial.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 36);
-    mixDial.setRange(0.0, 100.0, 1.0);
-    mixDialAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, mixID, mixDial);
+    addAndMakeVisible(largeDial);
     
-    addAndMakeVisible(lowpassDial);
-    lowpassDial.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    lowpassDial.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 36);
-    lowpassDial.setRange(1000.0, 20000.0, 1.0);
-    lowpassDialAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
+    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::backgroundColourId, juce::Colour::fromRGB(54, 57, 63));
+    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::outlineColourId, juce::Colour::fromRGB(0, 0, 0));
     
-    addAndMakeVisible(fader);
-    fader.setTextBoxStyle(juce::Slider::TextBoxLeft, false, 72, 36);
-    fader.setRange(0.0, 100.0, 1.0);
+    addAndMakeVisible(headerComponent);
+    
+    addAndMakeVisible(settingsPage);
+    showToolTip(settingsPage.getShouldUseToolTips());
 }

@@ -4,45 +4,88 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="O12BMG" name="VoxDrive">
     <GROUP id="{99FC07AC-F8D0-2F17-656E-A0A2063E6628}" name="Source">
-      <GROUP id="{74024A05-720C-64F7-9193-4312CF5F502F}" name="LookAndFeel">
-        <FILE id="TMwR2N" name="DialLAF.cpp" compile="1" resource="0" file="Source/LookAndFeel/DialLAF.cpp"/>
-        <FILE id="yWGLcs" name="DialLAF.h" compile="0" resource="0" file="Source/LookAndFeel/DialLAF.h"/>
+      <GROUP id="{189272AC-D26A-D5E0-2370-70454815FD31}" name="Buttons">
+        <FILE id="ceQMgE" name="SettingsButtonLogic.cpp" compile="1" resource="0"
+              file="Source/UI-Methods/Buttons/SettingsButtonLogic.cpp"/>
       </GROUP>
-      <GROUP id="{704732CF-5310-B08E-2E59-B244BD06AECE}" name="Assets">
-        <FILE id="rAN5fs" name="Articulations_back.png" compile="0" resource="1"
+      <GROUP id="{EA59C694-BF71-F9A5-1F54-34D22BB50C58}" name="Assets">
+        <FILE id="vmEKQQ" name="Articulations_back.png" compile="0" resource="1"
               file="Source/Assets/Articulations_back.png"/>
-        <FILE id="ZpYblP" name="Articulations_decore.png" compile="0" resource="1"
+        <FILE id="pbGv0T" name="Articulations_decore.png" compile="0" resource="1"
               file="Source/Assets/Articulations_decore.png"/>
-        <FILE id="Ij93NG" name="Articulations_line_1.png" compile="0" resource="1"
+        <FILE id="feP9nH" name="Articulations_line_1.png" compile="0" resource="1"
               file="Source/Assets/Articulations_line_1.png"/>
-        <FILE id="dJvOfK" name="Articulations_line_2.png" compile="0" resource="1"
+        <FILE id="Tkbx72" name="Articulations_line_2.png" compile="0" resource="1"
               file="Source/Assets/Articulations_line_2.png"/>
-        <FILE id="cjBKUr" name="back_vu-meter_decore.png" compile="0" resource="1"
+        <FILE id="PE3tIk" name="back_vu-meter_decore.png" compile="0" resource="1"
               file="Source/Assets/back_vu-meter_decore.png"/>
-        <FILE id="gLyTAt" name="background.png" compile="0" resource="1" file="Source/Assets/background.png"/>
-        <FILE id="jB2QUs" name="btclipper.png" compile="0" resource="1" file="Source/Assets/btclipper.png"/>
-        <FILE id="jvEKR6" name="button_middle_off.png" compile="0" resource="1"
+        <FILE id="S8iSYs" name="background.png" compile="0" resource="1" file="Source/Assets/background.png"/>
+        <FILE id="aYrxlP" name="btclipper.png" compile="0" resource="1" file="Source/Assets/btclipper.png"/>
+        <FILE id="DSmAaC" name="button_middle_off.png" compile="0" resource="1"
               file="Source/Assets/button_middle_off.png"/>
-        <FILE id="ZLDmRA" name="button_middle_on.png" compile="0" resource="1"
+        <FILE id="cIufQt" name="button_middle_on.png" compile="0" resource="1"
               file="Source/Assets/button_middle_on.png"/>
-        <FILE id="jrrA8o" name="button_small_off.png" compile="0" resource="1"
+        <FILE id="CnNwG7" name="button_small_off.png" compile="0" resource="1"
               file="Source/Assets/button_small_off.png"/>
-        <FILE id="YNxdHf" name="button_small_on.png" compile="0" resource="1"
+        <FILE id="q8kkHC" name="button_small_on.png" compile="0" resource="1"
               file="Source/Assets/button_small_on.png"/>
-        <FILE id="WPTqZi" name="knob_middle.png" compile="0" resource="1" file="Source/Assets/knob_middle.png"/>
-        <FILE id="Txby22" name="knob_small.png" compile="0" resource="1" file="Source/Assets/knob_small.png"/>
-        <FILE id="y1Gu8m" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
-        <FILE id="EojFpV" name="led_off.png" compile="0" resource="1" file="Source/Assets/led_off.png"/>
-        <FILE id="iCrsRK" name="led_on.png" compile="0" resource="1" file="Source/Assets/led_on.png"/>
-        <FILE id="BD2WlT" name="pluginBackground2.png" compile="0" resource="1"
+        <FILE id="YR3KNP" name="knob_big.png" compile="0" resource="1" file="Source/Assets/knob_big.png"/>
+        <FILE id="PNPyEN" name="knob_middle.png" compile="0" resource="1" file="Source/Assets/knob_middle.png"/>
+        <FILE id="fgT0Ig" name="knob_small.png" compile="0" resource="1" file="Source/Assets/knob_small.png"/>
+        <FILE id="sRoB84" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
+        <FILE id="GNhFfp" name="led_off.png" compile="0" resource="1" file="Source/Assets/led_off.png"/>
+        <FILE id="vopGpR" name="led_on.png" compile="0" resource="1" file="Source/Assets/led_on.png"/>
+        <FILE id="RcUE4d" name="pluginBackground2.png" compile="0" resource="1"
               file="Source/Assets/pluginBackground2.png"/>
-        <FILE id="QtX1lN" name="projucer.png" compile="0" resource="1" file="Source/Assets/projucer.png"/>
-        <FILE id="zwloyG" name="scale_knob middle.png" compile="0" resource="1"
+        <FILE id="HOsfVo" name="projucer.png" compile="0" resource="1" file="Source/Assets/projucer.png"/>
+        <FILE id="oYOYbi" name="scale_knob big.png" compile="0" resource="1"
+              file="Source/Assets/scale_knob big.png"/>
+        <FILE id="HL4OXp" name="scale_knob middle.png" compile="0" resource="1"
               file="Source/Assets/scale_knob middle.png"/>
-        <FILE id="lB9HPw" name="scale_knob small_.png" compile="0" resource="1"
+        <FILE id="fHPZEv" name="scale_knob small_.png" compile="0" resource="1"
               file="Source/Assets/scale_knob small_.png"/>
-        <FILE id="P6BqbN" name="slider_vertical.png" compile="0" resource="1"
+        <FILE id="SM4aIF" name="slider_vertical.png" compile="0" resource="1"
               file="Source/Assets/slider_vertical.png"/>
+      </GROUP>
+      <FILE id="TcYukA" name="Globals.cpp" compile="1" resource="0" file="Source/Globals.cpp"/>
+      <FILE id="yDD5Fx" name="Globals.h" compile="0" resource="0" file="Source/Globals.h"/>
+      <GROUP id="{D7401EA1-02F4-D77C-617F-93ECD62B6F05}" name="LookAndFeel">
+        <FILE id="rQlhuA" name="ColorButtonLAF.cpp" compile="1" resource="0"
+              file="Source/LookAndFeel/ColorButtonLAF.cpp"/>
+        <FILE id="fHojf8" name="ColorButtonLAF.h" compile="0" resource="0"
+              file="Source/LookAndFeel/ColorButtonLAF.h"/>
+        <FILE id="mAwhbd" name="LabelLAF.cpp" compile="1" resource="0" file="Source/LookAndFeel/LabelLAF.cpp"/>
+        <FILE id="pVaiZ0" name="LabelLAF.h" compile="0" resource="0" file="Source/LookAndFeel/LabelLAF.h"/>
+        <FILE id="fuI8mg" name="MenuSliderLAF.cpp" compile="1" resource="0"
+              file="Source/LookAndFeel/MenuSliderLAF.cpp"/>
+        <FILE id="TyasDA" name="MenuSliderLAF.h" compile="0" resource="0" file="Source/LookAndFeel/MenuSliderLAF.h"/>
+        <FILE id="gsdRra" name="SettingsButtonLAF.cpp" compile="1" resource="0"
+              file="Source/LookAndFeel/SettingsButtonLAF.cpp"/>
+        <FILE id="FGuoGw" name="SettingsButtonLAF.h" compile="0" resource="0"
+              file="Source/LookAndFeel/SettingsButtonLAF.h"/>
+        <FILE id="z8Ui3K" name="ToggleButtonLAF.cpp" compile="1" resource="0"
+              file="Source/LookAndFeel/ToggleButtonLAF.cpp"/>
+        <FILE id="ITCvyB" name="ToggleButtonLAF.h" compile="0" resource="0"
+              file="Source/LookAndFeel/ToggleButtonLAF.h"/>
+      </GROUP>
+      <GROUP id="{FB64B0ED-B83C-CC08-460F-DEF35CAB45CA}" name="UI-Components">
+        <GROUP id="{BD17C6F5-8B75-7366-C75D-EC9A29DBD296}" name="SettingsComps">
+          <FILE id="IgeWIa" name="MasterColorComp.cpp" compile="1" resource="0"
+                file="Source/UI-Components/SettingsComps/MasterColorComp.cpp"/>
+          <FILE id="TrgYcF" name="MasterColorComp.h" compile="0" resource="0"
+                file="Source/UI-Components/SettingsComps/MasterColorComp.h"/>
+          <FILE id="DBkDVD" name="ToolTipSettingsComp.cpp" compile="1" resource="0"
+                file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.cpp"/>
+          <FILE id="KXSETS" name="ToolTipSettingsComp.h" compile="0" resource="0"
+                file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.h"/>
+        </GROUP>
+        <FILE id="YmjPJP" name="HeaderComponent.cpp" compile="1" resource="0"
+              file="Source/UI-Components/HeaderComponent.cpp"/>
+        <FILE id="VlwM1F" name="HeaderComponent.h" compile="0" resource="0"
+              file="Source/UI-Components/HeaderComponent.h"/>
+        <FILE id="Owtqgx" name="SettingsPage.cpp" compile="1" resource="0"
+              file="Source/UI-Components/SettingsPage.cpp"/>
+        <FILE id="rQOZtq" name="SettingsPage.h" compile="0" resource="0" file="Source/UI-Components/SettingsPage.h"/>
       </GROUP>
       <GROUP id="{B8727BBB-6BA8-C486-6D81-61ED6009359A}" name="DSP">
         <FILE id="CDnNnP" name="VoxDistortion.cpp" compile="1" resource="0"

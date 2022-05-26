@@ -148,6 +148,9 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     
     voxDistortionModule.prepare(spec);
     updateParameters();
+    
+    cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
+
 }
 
 void VoxDriveAudioProcessor::releaseResources()
@@ -188,9 +191,19 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+    juce::AudioProcessLoadMeasurer::ScopedTimer s(cpuMeasureModule);
+
     juce::dsp::AudioBlock<float> audioBlock {buffer};
     
     voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+    
+    cpuLoad.store(cpuMeasureModule.getLoadAsPercentage());
+
+}
+
+float VoxDriveAudioProcessor::getCPULoad()
+{
+    return cpuLoad.load();
 }
 
 //==============================================================================
@@ -208,15 +221,26 @@ juce::AudioProcessorEditor* VoxDriveAudioProcessor::createEditor()
 //==============================================================================
 void VoxDriveAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    // Save params
+    treeState.state.appendChild(variableTree, nullptr);
+    juce::MemoryOutputStream stream(destData, false);
+    treeState.state.writeToStream (stream);
 }
 
 void VoxDriveAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    // Recall params
+    auto tree = juce::ValueTree::readFromData (data, size_t(sizeInBytes));
+    variableTree = tree.getChildWithName("Variables");
+    
+    if (tree.isValid())
+    {
+        treeState.state = tree;
+        
+        // Window Size
+        windowWidth = variableTree.getProperty("width");
+        windowHeight = variableTree.getProperty("height");
+    }
 }
 
 //==============================================================================

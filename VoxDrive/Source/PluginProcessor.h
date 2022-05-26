@@ -56,17 +56,7 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     
-    juce::ValueTree variableTree
-    { "Variables", {},
-        {
-        { "Group", {{ "name", "Vars" }},
-            {
-                { "Parameter", {{ "id", "width" }, { "value", 0.0 }}},
-                { "Parameter", {{ "id", "height" }, { "value", 0.0 }}},
-            }
-        }
-        }
-    };
+    juce::ValueTree variableTree {"Variables"};
     
     /** Window Vars =====================================================*/
     float windowWidth {0.0f};
@@ -76,6 +66,8 @@ public:
     
     juce::AudioProcessorValueTreeState treeState;
     
+    float getCPULoad();
+    
 private:
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;
@@ -83,6 +75,9 @@ private:
     /** DSP */
     VoxDistortion<float> voxDistortionModule;
     juce::dsp::ProcessSpec spec;
+    
+    juce::AudioProcessLoadMeasurer cpuMeasureModule;
+    std::atomic<float> cpuLoad;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessor)
 };

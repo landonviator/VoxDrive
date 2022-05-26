@@ -10,12 +10,15 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
-#include "./LookAndFeel/DialLAF.h"
+#include "./UI-Components/HeaderComponent.h"
+#include "./UI-Components/SettingsPage.h"
+#include "./UI-Components/SettingsComps/ToolTipSettingsComp.h"
 
 //==============================================================================
 /**
 */
 class VoxDriveAudioProcessorEditor  : public juce::AudioProcessorEditor
+, private juce::Timer
 {
 public:
     VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor&);
@@ -24,6 +27,11 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
+    
+    void timerCallback() override
+    {
+        showToolTip(settingsPage.getShouldUseToolTips());
+    }
 
 private:
     // This reference is provided as a quick way for your editor to
@@ -38,19 +46,20 @@ private:
     void saveWindowSize();
     bool constructorFinished = false;
     
-    juce::Slider inputDial;
-    juce::Slider cutoffDial;
-    juce::Slider mixDial;
-    juce::Slider lowpassDial;
+    float topMargin;
     
-    juce::Slider fader;
+    //Header
+    HeaderComponent headerComponent;
     
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> inputDialAttach;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> cutoffDialAttach;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> mixDialAttach;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> lowpassDialAttach;
+    //Settings Page
+    SettingsPage settingsPage;
+    void setSettingsPageBounds();
+    juce::ComponentAnimator settingsPageAnimator;
     
-    CustomDial customDialLAF;
+    juce::TooltipWindow tooltipWindow{nullptr, 500};
+    void showToolTip(bool shouldShowTips);
+    
+    viator_gui::FilmStripKnob largeDial;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };

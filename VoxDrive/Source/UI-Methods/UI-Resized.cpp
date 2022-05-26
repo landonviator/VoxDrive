@@ -12,20 +12,37 @@
 
 void VoxDriveAudioProcessorEditor::uiResized()
 {
-    auto leftMargin = getWidth() * 0.1;
-    auto topMargin = getHeight() * 0.25;
-    auto dialSize = getWidth() * 0.2;
-    auto faderWidth = dialSize;
-    auto faderHeight = getHeight() * 0.2;
-    auto spaceBetween = 1.25;
+    topMargin = getHeight() * 0.05;
     
-    inputDial.setBounds(leftMargin, topMargin, dialSize, dialSize);
-    cutoffDial.setBounds(inputDial.getX() + inputDial.getWidth(), topMargin, dialSize, dialSize);
-    mixDial.setBounds(cutoffDial.getX() + cutoffDial.getWidth(), topMargin, dialSize, dialSize);
-    lowpassDial.setBounds(mixDial.getX() + mixDial.getWidth(), topMargin, dialSize, dialSize);
+    //Header
+    headerComponent.setBounds(0, 0, getWidth(), topMargin);
     
-    fader.setBounds(inputDial.getX(), inputDial.getY() + inputDial.getHeight() * spaceBetween, faderWidth, faderHeight);
+    //Settings Page
+    setSettingsPageBounds();
     
     // Save plugin size in the tree
     saveWindowSize();
+}
+
+void VoxDriveAudioProcessorEditor::setSettingsPageBounds()
+{
+    auto settingsWidth = getWidth() * 0.5;
+    auto settingsHeight = getHeight() * 0.95;
+    
+    auto settingsPageBounds = juce::Rectangle<float>(settingsWidth, topMargin, settingsWidth, settingsHeight).toNearestInt();
+    auto settingsPageOutBounds = juce::Rectangle<float>(getWidth(), topMargin, settingsWidth, settingsHeight).toNearestInt();
+    
+    headerComponent.getSettingsButtonToggleState() ? settingsPage.setBounds(settingsPageBounds) : settingsPage.setBounds(settingsPageOutBounds);
+    
+//    if (headerComponent.getSettingsButtonToggleState())
+//    {
+//        settingsPageAnimator.animateComponent(&settingsPage, settingsPageBounds, 1.0f, 250, false, 1.0, 1.0);
+//    }
+//
+//    else
+//    {
+//        settingsPageAnimator.animateComponent(&settingsPage, settingsPageOutBounds, 1.0f, 250, false, 1.0, 1.0);
+//    }
+    
+    largeDial.setBounds(getLocalBounds().withSizeKeepingCentre(getWidth() * 0.25, getWidth() * 0.25));
 }

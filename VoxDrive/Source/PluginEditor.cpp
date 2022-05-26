@@ -12,13 +12,14 @@
 //==============================================================================
 VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
+, headerComponent(audioProcessor)
+, largeDial(2, " dB", "Dial")
 {
     uiConstructor();
 }
 
 VoxDriveAudioProcessorEditor::~VoxDriveAudioProcessorEditor()
 {
-    inputDial.setLookAndFeel(nullptr);
 }
 
 //==============================================================================
@@ -30,4 +31,10 @@ void VoxDriveAudioProcessorEditor::paint (juce::Graphics& g)
 void VoxDriveAudioProcessorEditor::resized()
 {
     uiResized();
+}
+
+void VoxDriveAudioProcessorEditor::showToolTip(bool shouldShowTips)
+{
+    tooltipWindow.setEnabled(shouldShowTips);
+    tooltipWindow.setVisible(shouldShowTips);
 }
