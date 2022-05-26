@@ -3,8 +3,11 @@
 
 //==============================================================================
 
-ToolTipSettingsComp::ToolTipSettingsComp()
+ToolTipSettingsComp::ToolTipSettingsComp(VoxDriveAudioProcessor& p) : audioProcessor(p)
 {
+    toolTipToggle.setToggleState(audioProcessor.variableTree.getProperty("tooltip"), juce::dontSendNotification);
+    shouldUseToolTips = audioProcessor.variableTree.getProperty("tooltip");
+    
     /** Tooltip Toggle */
     addAndMakeVisible(toolTipToggle);
     toolTipToggle.setColour(juce::TextButton::ColourIds::buttonColourId, juce::Colours::transparentBlack);
@@ -14,6 +17,7 @@ ToolTipSettingsComp::ToolTipSettingsComp()
     toolTipToggle.onClick = [this]()
     {
         shouldUseToolTips = toolTipToggle.getToggleState();
+        audioProcessor.variableTree.setProperty("tooltip", toolTipToggle.getToggleState(), nullptr);
     };
     
     /** Tooltip Label */

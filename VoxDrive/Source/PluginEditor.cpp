@@ -13,7 +13,10 @@
 VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor& p)
 : AudioProcessorEditor (&p), audioProcessor (p), headerComponent(audioProcessor)
 , settingsPage(audioProcessor)
-, largeDial(2, " dB", "Drive")
+, driveDial(2, " dB", "Drive")
+, rangeDial(1, " Hz", "Range")
+, lowpassDial(1, " Hz", "LP")
+, trimDial(1, " dB", "Trim")
 {
     uiConstructor();
 }

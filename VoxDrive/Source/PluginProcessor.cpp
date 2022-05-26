@@ -27,6 +27,8 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(cutoffID, this);
     treeState.addParameterListener(mixID, this);
     treeState.addParameterListener(lowpassID, this);
+    
+    variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
 }
 
 VoxDriveAudioProcessor::~VoxDriveAudioProcessor()

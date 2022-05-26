@@ -2,13 +2,14 @@
 
 #include <JuceHeader.h>
 #include "../../LookAndFeel/ToggleButtonLAF.h"
+#include "../../PluginProcessor.h"
 
 //==============================================================================
 
 class ToolTipSettingsComp  : public juce::Component
 {
 public:
-    ToolTipSettingsComp();
+    ToolTipSettingsComp(VoxDriveAudioProcessor&);
     ~ToolTipSettingsComp() override;
 
     void paint (juce::Graphics&) override;
@@ -17,6 +18,8 @@ public:
     
 private:
     
+    VoxDriveAudioProcessor& audioProcessor;
+
     juce::TextButton toolTipToggle;
     juce::Label tooltipLabel;
     ToggleButtonLAF customToggleButton;

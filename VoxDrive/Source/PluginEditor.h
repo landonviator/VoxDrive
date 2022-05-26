@@ -59,7 +59,10 @@ private:
     juce::TooltipWindow tooltipWindow{nullptr, 500};
     void showToolTip(bool shouldShowTips);
     
-    viator_gui::FilmStripKnob largeDial;
+    viator_gui::FilmStripKnob driveDial;
+    viator_gui::FilmStripKnob rangeDial;
+    viator_gui::FilmStripKnob lowpassDial;
+    viator_gui::FilmStripKnob trimDial;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };
