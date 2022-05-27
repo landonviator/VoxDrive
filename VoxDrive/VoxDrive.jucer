@@ -44,6 +44,8 @@
               file="Source/Assets/scale_knob middle.png"/>
         <FILE id="fHPZEv" name="scale_knob small_.png" compile="0" resource="1"
               file="Source/Assets/scale_knob small_.png"/>
+        <FILE id="ykZeEL" name="slider_horizontal.png" compile="0" resource="1"
+              file="Source/Assets/slider_horizontal.png"/>
         <FILE id="SM4aIF" name="slider_vertical.png" compile="0" resource="1"
               file="Source/Assets/slider_vertical.png"/>
       </GROUP>

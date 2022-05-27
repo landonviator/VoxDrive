@@ -11,3 +11,6 @@
 
 #define lowpassID  "lowpass"
 #define lowpassName  "Lowpass"
+
+#define trimID  "trim"
+#define trimName  "Trim"

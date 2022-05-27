@@ -17,6 +17,9 @@ VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcess
 , rangeDial(1, " Hz", "Range")
 , lowpassDial(1, " Hz", "LP")
 , trimDial(1, " dB", "Trim")
+, mixFader(129, false)
+, osButton(true, "OS")
+, phaseButton(true, "Phase")
 {
     uiConstructor();
 }

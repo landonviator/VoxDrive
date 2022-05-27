@@ -65,7 +65,7 @@ public:
         
         auto output = lowBand + lpFilter.processSample(ch, highDistort);
         
-        return (1.0 - mMix.getNextValue()) * newInput + mMix.getNextValue() * output;
+        return (1.0 - mMix.getNextValue()) * newInput + mMix.getNextValue() * output * mTrim.getNextValue();
     }
     
     void setDrive(SampleType newDrive);
@@ -76,12 +76,15 @@ public:
     
     void setLPCutoff(SampleType newCutoff);
     
+    void setTrim(SampleType newTrim);
+    
 private:
     float mSampleRate;
     juce::SmoothedValue<float> mDrive;
     juce::SmoothedValue<float> mCutoff;
     juce::SmoothedValue<float> mMix;
     juce::SmoothedValue<float> mLPCutoff;
+    juce::SmoothedValue<float> mTrim;
     
     static constexpr float piDivisor = 2.0 / juce::MathConstants<float>::pi;
     

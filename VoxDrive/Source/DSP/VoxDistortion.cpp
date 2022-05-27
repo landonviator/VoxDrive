@@ -48,6 +48,9 @@ void VoxDistortion<SampleType>::reset() noexcept
         
         mLPCutoff.reset(mSampleRate, 0.02);
         mLPCutoff.setTargetValue(1000.0f);
+        
+        mTrim.reset(mSampleRate, 0.02);
+        mTrim.setTargetValue(0.0f);
     }
 }
 
@@ -74,6 +77,12 @@ template <typename SampleType>
 void VoxDistortion<SampleType>::setLPCutoff(SampleType newCutoff)
 {
     mLPCutoff.setTargetValue(newCutoff);
+}
+
+template <typename SampleType>
+void VoxDistortion<SampleType>::setTrim(SampleType newTrim)
+{
+    mTrim.setTargetValue(juce::Decibels::decibelsToGain(newTrim));
 }
 
 template class VoxDistortion<float>;

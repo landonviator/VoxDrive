@@ -63,6 +63,16 @@ private:
     viator_gui::FilmStripKnob rangeDial;
     viator_gui::FilmStripKnob lowpassDial;
     viator_gui::FilmStripKnob trimDial;
+    
+    viator_gui::FilmStripFader mixFader;
+    
+    viator_gui::ToggleButton osButton;
+    viator_gui::ToggleButton phaseButton;
+    
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> driveAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> rangeAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> lowpassAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> trimAttach;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };

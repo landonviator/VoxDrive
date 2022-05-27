@@ -27,8 +27,10 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(cutoffID, this);
     treeState.addParameterListener(mixID, this);
     treeState.addParameterListener(lowpassID, this);
+    treeState.addParameterListener(trimID, this);
     
     variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
+    cpuLoad.store(0.0f);
 }
 
 VoxDriveAudioProcessor::~VoxDriveAudioProcessor()
@@ -37,6 +39,7 @@ VoxDriveAudioProcessor::~VoxDriveAudioProcessor()
     treeState.removeParameterListener(cutoffID, this);
     treeState.removeParameterListener(mixID, this);
     treeState.removeParameterListener(lowpassID, this);
+    treeState.removeParameterListener(trimID, this);
 }
 
 juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::createParameterLayout()
@@ -44,14 +47,16 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
         
     auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, 0.0f, 24.0f, 0.0f);
-    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 0.0f);
+    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 500.0f);
     auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
     auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.5), 20000.0f);
+    auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
     
     params.push_back(std::move(pInput));
     params.push_back(std::move(pCutoff));
     params.push_back(std::move(pMix));
     params.push_back(std::move(pLowpass));
+    params.push_back(std::move(pTrim));
     
     return { params.begin(), params.end() };
 }
@@ -64,18 +69,10 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
 void VoxDriveAudioProcessor::updateParameters()
 {
     voxDistortionModule.setDrive(treeState.getRawParameterValue(inputID)->load());
-    
-    //auto newCutoff = juce::jmap(treeState.getRawParameterValue(cutoffID)->load(), 0.0f, 100.0f, 500.0f, 20000.0f);
-    //voxDistortionModule.setCutoff(newCutoff);
-    
-    DBG("Input: " << treeState.getRawParameterValue(inputID)->load());
-    DBG("Cutoff: " << treeState.getRawParameterValue(cutoffID)->load());
-    DBG("Mix: " << treeState.getRawParameterValue(mixID)->load());
-    DBG("Lowpass: " << treeState.getRawParameterValue(lowpassID)->load());
-    
     voxDistortionModule.setCutoff(treeState.getRawParameterValue(cutoffID)->load());
     voxDistortionModule.setMix(treeState.getRawParameterValue(mixID)->load());
     voxDistortionModule.setLPCutoff(treeState.getRawParameterValue(lowpassID)->load());
+    voxDistortionModule.setTrim(treeState.getRawParameterValue(trimID)->load());
 }
 
 //==============================================================================
@@ -152,7 +149,6 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     updateParameters();
     
     cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
-
 }
 
 void VoxDriveAudioProcessor::releaseResources()
