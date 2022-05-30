@@ -26,12 +26,12 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     addAndMakeVisible(rangeDial);
     rangeDial.setTooltip("This knob sets the range of frequencies affected by the harmonic distortion. Any frequencies above this range seting will be distorted and anything below will be left unprocessed.");
-    rangeDial.setRange(500.0, 20000.0);
-    DBG(rangeDial.getValue());
+    rangeDial.setLabelAsInt(true);
     rangeAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, rangeDial);
     
     addAndMakeVisible(lowpassDial);
     lowpassDial.setTooltip("A high cut filter to reduce harsh high frequencies.");
+    lowpassDial.setLabelAsInt(true);
     lowpassAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
     
     addAndMakeVisible(trimDial);
