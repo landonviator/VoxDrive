@@ -69,6 +69,8 @@ private:
     viator_gui::ToggleButton osButton;
     viator_gui::ToggleButton phaseButton;
     
+    bool imageAlphaChanged = false;
+    
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> driveAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> rangeAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> lowpassAttach;

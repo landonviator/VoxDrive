@@ -20,5 +20,22 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     lowpassDial.updateLabelColor(masterColor);
     trimDial.updateLabelColor(masterColor);
     
+    //Circuit
+    auto circuitScale = 0.55f;
+    auto circuit = juce::ImageCache::getFromMemory(BinaryData::VoxDriveCircuit_png, BinaryData::VoxDriveCircuit_pngSize);
+    
+    if (!imageAlphaChanged) circuit.multiplyAllAlphas(0.15f);
+    imageAlphaChanged = true;
+    
+    g.drawImageWithin
+    (
+        circuit,
+        getWidth() * 0.095f,
+        getHeight() * 0.12f,
+        getWidth() * 0.4168f * circuitScale,
+        getWidth() * circuitScale,
+        juce::RectanglePlacement::stretchToFit
+     );
+    
     headerComponent.repaint();
 }

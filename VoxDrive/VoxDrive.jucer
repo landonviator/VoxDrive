@@ -48,6 +48,8 @@
               file="Source/Assets/slider_horizontal.png"/>
         <FILE id="SM4aIF" name="slider_vertical.png" compile="0" resource="1"
               file="Source/Assets/slider_vertical.png"/>
+        <FILE id="cnu9tM" name="VoxDriveCircuit.png" compile="0" resource="1"
+              file="Source/Assets/VoxDriveCircuit.png"/>
       </GROUP>
       <FILE id="TcYukA" name="Globals.cpp" compile="1" resource="0" file="Source/Globals.cpp"/>
       <FILE id="yDD5Fx" name="Globals.h" compile="0" resource="0" file="Source/Globals.h"/>

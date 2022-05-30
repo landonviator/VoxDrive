@@ -80,8 +80,11 @@ namespace BinaryData
     extern const char*   slider_vertical_png;
     const int            slider_vertical_pngSize = 2042437;
 
+    extern const char*   VoxDriveCircuit_png;
+    const int            VoxDriveCircuit_pngSize = 106642;
+
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 24;
+    const int namedResourceListSize = 25;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
