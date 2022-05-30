@@ -42,6 +42,15 @@ void HeaderComponent::paint (juce::Graphics& g)
     
     g.setColour(juce::Colours::whitesmoke.darker(1.0f).darker(1.0f));
     g.drawLine(0, getHeight(), getWidth(), getHeight(), 2.0f);
+    
+    //Version string
+    g.setColour(juce::Colours::whitesmoke.withAlpha(0.35f));
+    float x = getWidth() * 0.425f;
+    float y = getHeight() * 0.45f;
+    float width = getWidth() * 0.15f;
+    float height = getHeight() * 0.2f;
+    g.setFont(juce::Font ("Helvetica", getWidth() * 0.02f, juce::Font::FontStyleFlags::bold));
+    g.drawFittedText("Vox Amp v1.0.0", x, y, width, height, juce::Justification::centred, 1);
 }
 
 void HeaderComponent::resized()
