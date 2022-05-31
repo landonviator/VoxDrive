@@ -31,7 +31,7 @@ void HeaderComponent::paint (juce::Graphics& g)
     g.setColour(masterColor);
     g.fillRect(headerRect);
     
-    // Logo laye
+    // Logo layer
     auto headerLogo = juce::ImageCache::getFromMemory(BinaryData::landon5504_png, BinaryData::landon5504_pngSize);
     g.drawImageWithin(headerLogo,
                       getWidth() * -0.22f,
@@ -40,11 +40,17 @@ void HeaderComponent::paint (juce::Graphics& g)
                       getHeight() * 0.65f,
                       juce::RectanglePlacement::centred);
     
+    // Patreon link
+    mWebLink.setURL(mWebUrl);
+    addAndMakeVisible(mWebLink);
+    mWebLink.setBounds(getWidth() * -0.22f, getHeight() * 0.2f, getWidth() * 0.6f, getHeight() * 0.65f);
+        
+    
     g.setColour(juce::Colours::whitesmoke.darker(1.0f).darker(1.0f));
     g.drawLine(0, getHeight(), getWidth(), getHeight(), 2.0f);
     
     //Version string
-    g.setColour(juce::Colours::whitesmoke.withAlpha(0.35f));
+    g.setColour(masterColor == juce::Colours::black ? juce::Colours::whitesmoke.withAlpha(0.35f) : juce::Colours::whitesmoke);
     float x = getWidth() * 0.425f;
     float y = getHeight() * 0.45f;
     float width = getWidth() * 0.15f;

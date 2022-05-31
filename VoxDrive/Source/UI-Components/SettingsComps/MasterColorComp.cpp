@@ -110,7 +110,7 @@ MasterColorComp::MasterColorComp(VoxDriveAudioProcessor& p) : audioProcessor(p)
     
     addAndMakeVisible(colorsLabel);
     colorsLabel.setText("Plugin Accent Color", juce::dontSendNotification);
-    colorsLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.5f));
+    colorsLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::dimgrey);
 }
 
 MasterColorComp::~MasterColorComp()
@@ -127,7 +127,7 @@ MasterColorComp::~MasterColorComp()
 
 void MasterColorComp::paint (juce::Graphics& g)
 {
-    g.setColour(juce::Colours::whitesmoke.withAlpha(0.15f));
+    g.setColour(juce::Colours::black.brighter(0.15f));
     g.fillRoundedRectangle(getWidth() * 0.05, getHeight() * 0.05, getWidth() * 0.9, getHeight() * 0.9, 2.0f);
     
     g.setColour(juce::Colours::black.withAlpha(0.3f));

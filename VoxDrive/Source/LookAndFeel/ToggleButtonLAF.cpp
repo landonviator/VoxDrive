@@ -11,8 +11,6 @@ void ToggleButtonLAF::drawButtonBackground (juce::Graphics& g,
                                            bool shouldDrawButtonAsHighlighted,
                                            bool shouldDrawButtonAsDown)
 {
-    button.setClickingTogglesState(true);
-    
     auto cornerSize = 6.0f;
     auto bounds = button.getLocalBounds().toFloat().reduced (0.5f, 0.5f);
     

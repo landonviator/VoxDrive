@@ -40,5 +40,9 @@ private:
     float cpu = 0;
     LabelLAF customLabelLAF;
     
+    //Patreon link
+    juce::HyperlinkButton mWebLink;
+    juce::URL mWebUrl {"https://www.patreon.com/ViatorDSP"};
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HeaderComponent)
 };

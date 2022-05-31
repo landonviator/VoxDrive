@@ -7,6 +7,8 @@
 #include "../Globals.h"
 #include "SettingsComps/ToolTipSettingsComp.h"
 #include "SettingsComps/MasterColorComp.h"
+#include "SettingsComps/DiscordComp.h"
+#include "SettingsComps/PatreonComp.h"
 
 //==============================================================================
 
@@ -28,6 +30,8 @@ private:
     
     ToolTipSettingsComp tooltipSettingsComp;
     MasterColorComp masterColorComp;
+    DiscordComp discordComp;
+    PatreonComp patreonComp;
     
     LabelLAF customLabelLAF;
     

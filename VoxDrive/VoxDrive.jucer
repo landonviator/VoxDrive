@@ -74,10 +74,14 @@
       </GROUP>
       <GROUP id="{FB64B0ED-B83C-CC08-460F-DEF35CAB45CA}" name="UI-Components">
         <GROUP id="{BD17C6F5-8B75-7366-C75D-EC9A29DBD296}" name="SettingsComps">
+          <FILE id="TGLoHF" name="DiscordComp.cpp" compile="1" resource="0" file="Source/UI-Components/SettingsComps/DiscordComp.cpp"/>
+          <FILE id="tIRKf4" name="DiscordComp.h" compile="0" resource="0" file="Source/UI-Components/SettingsComps/DiscordComp.h"/>
           <FILE id="IgeWIa" name="MasterColorComp.cpp" compile="1" resource="0"
                 file="Source/UI-Components/SettingsComps/MasterColorComp.cpp"/>
           <FILE id="TrgYcF" name="MasterColorComp.h" compile="0" resource="0"
                 file="Source/UI-Components/SettingsComps/MasterColorComp.h"/>
+          <FILE id="D3B8LY" name="PatreonComp.cpp" compile="1" resource="0" file="Source/UI-Components/SettingsComps/PatreonComp.cpp"/>
+          <FILE id="d2tvlQ" name="PatreonComp.h" compile="0" resource="0" file="Source/UI-Components/SettingsComps/PatreonComp.h"/>
           <FILE id="DBkDVD" name="ToolTipSettingsComp.cpp" compile="1" resource="0"
                 file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.cpp"/>
           <FILE id="KXSETS" name="ToolTipSettingsComp.h" compile="0" resource="0"

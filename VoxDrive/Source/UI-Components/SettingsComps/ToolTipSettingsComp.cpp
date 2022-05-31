@@ -10,6 +10,7 @@ ToolTipSettingsComp::ToolTipSettingsComp(VoxDriveAudioProcessor& p) : audioProce
     
     /** Tooltip Toggle */
     addAndMakeVisible(toolTipToggle);
+    toolTipToggle.setClickingTogglesState(true);
     toolTipToggle.setColour(juce::TextButton::ColourIds::buttonColourId, juce::Colours::transparentBlack);
     toolTipToggle.setColour(juce::TextButton::ColourIds::buttonOnColourId, juce::Colours::black.brighter(0.15));
     toolTipToggle.setColour(juce::ComboBox::ColourIds::outlineColourId, juce::Colours::whitesmoke.withAlpha(0.3f));
@@ -23,7 +24,7 @@ ToolTipSettingsComp::ToolTipSettingsComp(VoxDriveAudioProcessor& p) : audioProce
     /** Tooltip Label */
     addAndMakeVisible(tooltipLabel);
     tooltipLabel.setText("Show Tool Tips?", juce::dontSendNotification);
-    tooltipLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.5f));
+    tooltipLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::dimgrey);
 }
 
 ToolTipSettingsComp::~ToolTipSettingsComp()
@@ -33,7 +34,7 @@ ToolTipSettingsComp::~ToolTipSettingsComp()
 
 void ToolTipSettingsComp::paint (juce::Graphics& g)
 {
-    g.setColour(juce::Colours::whitesmoke.withAlpha(0.15f));
+    g.setColour(juce::Colours::black.brighter(0.15f));
     g.fillRoundedRectangle(getWidth() * 0.05, getHeight() * 0.05, getWidth() * 0.9, getHeight() * 0.9, 2.0f);
     
     g.setColour(juce::Colours::black.withAlpha(0.3f));
