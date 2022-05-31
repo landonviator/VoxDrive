@@ -38,6 +38,8 @@
         <FILE id="RcUE4d" name="pluginBackground2.png" compile="0" resource="1"
               file="Source/Assets/pluginBackground2.png"/>
         <FILE id="HOsfVo" name="projucer.png" compile="0" resource="1" file="Source/Assets/projucer.png"/>
+        <FILE id="nKoa0d" name="scale_Horizontal slider.png" compile="0" resource="1"
+              file="Source/Assets/scale_Horizontal slider.png"/>
         <FILE id="oYOYbi" name="scale_knob big.png" compile="0" resource="1"
               file="Source/Assets/scale_knob big.png"/>
         <FILE id="HL4OXp" name="scale_knob middle.png" compile="0" resource="1"

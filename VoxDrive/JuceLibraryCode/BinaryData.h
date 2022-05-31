@@ -65,6 +65,9 @@ namespace BinaryData
     extern const char*   projucer_png;
     const int            projucer_pngSize = 123572;
 
+    extern const char*   scale_Horizontal_slider_png;
+    const int            scale_Horizontal_slider_pngSize = 870;
+
     extern const char*   scale_knob_big_png;
     const int            scale_knob_big_pngSize = 4086;
 
@@ -84,7 +87,7 @@ namespace BinaryData
     const int            VoxDriveCircuit_pngSize = 106642;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 25;
+    const int namedResourceListSize = 26;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

@@ -191,6 +191,7 @@
 		C54F3CF330D01D48A8DF672F /* include_juce_audio_plugin_client_Standalone.cpp */ /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_Standalone.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
 		C6B3ED14EB5335105295BEC2 /* knob_middle.png */ /* knob_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = knob_middle.png; path = ../../Source/Assets/knob_middle.png; sourceTree = SOURCE_ROOT; };
 		C709981EF90645935CB4C110 /* ToggleButtonLAF.h */ /* ToggleButtonLAF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ToggleButtonLAF.h; path = ../../Source/LookAndFeel/ToggleButtonLAF.h; sourceTree = SOURCE_ROOT; };
+		C9147234D19FC0EC5B52BC6E /* scale_Horizontal slider.png */ /* scale_Horizontal slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scale_Horizontal slider.png"; path = "../../Source/Assets/scale_Horizontal slider.png"; sourceTree = SOURCE_ROOT; };
 		C9AD79743AA5AF17DD09B3E7 /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
 		CD834EC7A70E2E0D61272E6F /* include_juce_audio_basics.mm */ /* include_juce_audio_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_basics.mm; path = ../../JuceLibraryCode/include_juce_audio_basics.mm; sourceTree = SOURCE_ROOT; };
 		CF212A5431959ED8E60C0CC5 /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = /Users/land00m/Documents/GitHub/JUCE/modules/juce_audio_processors; sourceTree = "<absolute>"; };
@@ -414,6 +415,7 @@
 				FCFB9A4B207BC8713ED3C5B5,
 				A59C15D5482D85287CD26249,
 				F5639030DD5FD2EAD1D094A3,
+				C9147234D19FC0EC5B52BC6E,
 				04444CC3963A8255A873ADDB,
 				305C1A0BE68CB612D331EF55,
 				DEA1C1B59BF20CB2FB105FA5,

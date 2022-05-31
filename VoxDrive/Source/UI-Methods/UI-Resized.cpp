@@ -12,11 +12,6 @@
 
 void VoxDriveAudioProcessorEditor::uiResized()
 {
-    auto rightMargin = getWidth() * 0.73f;
-    auto dialTopMargin = getHeight() * 0.25f;
-    auto dialSize = getWidth() * 0.12f;
-    auto spaceBetwween = 1.25f;
-    
     topMargin = getHeight() * 0.06;
     
     //Header
@@ -26,20 +21,25 @@ void VoxDriveAudioProcessorEditor::uiResized()
     setSettingsPageBounds();
     
     //Dials
+    auto rightMargin = getWidth() * 0.73f;
+    auto dialTopMargin = getHeight() * 0.25f;
+    auto dialSize = getWidth() * 0.12f;
+    auto spaceBetwween = 1.25f;
+    
     rangeDial.setBounds(rightMargin, dialTopMargin, dialSize, dialSize);
     auto space1 = rangeDial.getY() + rangeDial.getHeight() * spaceBetwween;
-    
     lowpassDial.setBounds(rightMargin, space1, dialSize, dialSize);
     auto space2 = lowpassDial.getY() + lowpassDial.getHeight() * spaceBetwween;
-
     trimDial.setBounds(rightMargin, space2, dialSize, dialSize);
 
-    auto mixSize = 0.55f;
-    auto x = getWidth() * 0.24f;
-    auto y = getHeight() * 0.7f;
-    mixFader.setBounds(x, y, mixFader.getFrameWidth(), mixFader.getFrameHeight());
-    mixFader.setBounds(mixFader.getBounds().withX(getWidth() * 0.27f).withSizeKeepingCentre(mixFader.getWidth() * mixSize, mixFader.getHeight() * mixSize));
+    //Mix fader
+    auto x = getWidth() * 0.36f;
+    auto y = getHeight() * 0.75f;
+    auto ratio = 0.388889f;
+    auto size = getWidth() * 0.28f;
+    mixFader.setBounds(x, y, size, size * ratio);
     
+    //Buttons
     auto leftButtonMargin = getWidth() * 0.095f;
     auto topButtonMargin = getHeight() * 0.85f;
     auto buttonWidth = getWidth() * 0.1;
