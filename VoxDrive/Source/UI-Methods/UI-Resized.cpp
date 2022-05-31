@@ -38,7 +38,7 @@ void VoxDriveAudioProcessorEditor::uiResized()
     auto x = getWidth() * 0.24f;
     auto y = getHeight() * 0.7f;
     mixFader.setBounds(x, y, mixFader.getFrameWidth(), mixFader.getFrameHeight());
-    mixFader.setBounds(mixFader.getBounds().withSizeKeepingCentre(mixFader.getWidth() * mixSize, mixFader.getHeight() * mixSize));
+    mixFader.setBounds(mixFader.getBounds().withX(getWidth() * 0.27f).withSizeKeepingCentre(mixFader.getWidth() * mixSize, mixFader.getHeight() * mixSize));
     
     auto leftButtonMargin = getWidth() * 0.095f;
     auto topButtonMargin = getHeight() * 0.85f;
