@@ -74,6 +74,7 @@ private:
     
     /** DSP */
     VoxDistortion<float> voxDistortionModule;
+    juce::dsp::Oversampling<float> oversamplingModule;
     juce::dsp::ProcessSpec spec;
     
     juce::AudioProcessLoadMeasurer cpuMeasureModule;

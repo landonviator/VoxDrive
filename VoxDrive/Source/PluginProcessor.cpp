@@ -21,6 +21,7 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
                      #endif
                        )
 , treeState(*this, nullptr, "PARAMETERS", createParameterLayout())
+, oversamplingModule(2, 2, juce::dsp::Oversampling<float>::FilterType::filterHalfBandPolyphaseIIR)
 #endif
 {
     treeState.addParameterListener(inputID, this);
@@ -28,6 +29,8 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(mixID, this);
     treeState.addParameterListener(lowpassID, this);
     treeState.addParameterListener(trimID, this);
+    treeState.addParameterListener(phaseID, this);
+    treeState.addParameterListener(hqID, this);
     
     variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
     cpuLoad.store(0.0f);
@@ -40,29 +43,53 @@ VoxDriveAudioProcessor::~VoxDriveAudioProcessor()
     treeState.removeParameterListener(mixID, this);
     treeState.removeParameterListener(lowpassID, this);
     treeState.removeParameterListener(trimID, this);
+    treeState.removeParameterListener(phaseID, this);
+    treeState.removeParameterListener(hqID, this);
 }
 
 juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::createParameterLayout()
 {
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
         
-    auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, 0.0f, 24.0f, 0.0f);
+    auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, 0.0f, 50.0f, 0.0f);
     auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 500.0f);
     auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
     auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.5), 20000.0f);
     auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
+    auto pPhase = std::make_unique<juce::AudioParameterBool>(phaseID, phaseName, false);
+    auto pHQ = std::make_unique<juce::AudioParameterBool>(hqID, hqName, false);
     
     params.push_back(std::move(pInput));
     params.push_back(std::move(pCutoff));
     params.push_back(std::move(pMix));
     params.push_back(std::move(pLowpass));
     params.push_back(std::move(pTrim));
+    params.push_back(std::move(pPhase));
+    params.push_back(std::move(pHQ));
     
     return { params.begin(), params.end() };
 }
 
 void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, float newValue)
 {
+    if (parameterID == hqID)
+    {
+        // Adjust samplerate of filters when oversampling
+        if (treeState.getRawParameterValue(hqID)->load())
+        {
+            spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
+            voxDistortionModule.prepare(spec);
+            cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
+        }
+
+        else
+        {
+            spec.sampleRate = getSampleRate();
+            voxDistortionModule.prepare(spec);
+            cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
+        }
+    }
+    
     updateParameters();
 }
 
@@ -73,6 +100,7 @@ void VoxDriveAudioProcessor::updateParameters()
     voxDistortionModule.setMix(treeState.getRawParameterValue(mixID)->load());
     voxDistortionModule.setLPCutoff(treeState.getRawParameterValue(lowpassID)->load());
     voxDistortionModule.setTrim(treeState.getRawParameterValue(trimID)->load());
+    voxDistortionModule.setPhase(treeState.getRawParameterValue(phaseID)->load());
 }
 
 //==============================================================================
@@ -140,6 +168,23 @@ void VoxDriveAudioProcessor::changeProgramName (int index, const juce::String& n
 //==============================================================================
 void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    /** Oversampling */
+    oversamplingModule.initProcessing(samplesPerBlock);
+    oversamplingModule.reset();
+    
+    // Adjust samplerate of filters when oversampling
+    if (treeState.getRawParameterValue(hqID)->load())
+    {
+        spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
+        cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
+    }
+
+    else
+    {
+        spec.sampleRate = getSampleRate();
+        cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
+    }
+    
     // Initialize spec for dsp modules
     spec.maximumBlockSize = samplesPerBlock;
     spec.sampleRate = sampleRate;
@@ -192,8 +237,22 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     juce::AudioProcessLoadMeasurer::ScopedTimer s(cpuMeasureModule);
 
     juce::dsp::AudioBlock<float> audioBlock {buffer};
+    juce::dsp::AudioBlock<float> upSampledBlock (buffer);
+
+    // Oversample if ON
+    if (treeState.getRawParameterValue(hqID)->load())
+    {
+        upSampledBlock = oversamplingModule.processSamplesUp(audioBlock);
+        voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
+        oversamplingModule.processSamplesDown(audioBlock);
+    }
+
+    // Don't Oversample if OFF
+    else
+    {
+        voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+    }
     
-    voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     
     cpuLoad.store(cpuMeasureModule.getLoadAsPercentage());
 }

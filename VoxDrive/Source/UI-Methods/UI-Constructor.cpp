@@ -40,16 +40,15 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     addAndMakeVisible(mixFader);
     mixFader.setTooltip("The Mix fader mixes the uneffected input from the DAW with the effected processing from the plugin. At the center, the signal will be equal parts processed and processed, while the bottom half will have more uneffected input and the top half with more effected processing.");
-    mixFader.onValueChange = [this]()
-    {
-        DBG(mixFader.getValue());
-    };
+    mixAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, mixID, mixFader);
     
     addAndMakeVisible(osButton);
     osButton.setTooltip("This turns on oversampling, which raises the quality of the effect and avoids aliasing in the non-linear processing.");
+    hqAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, hqID, osButton);
     
     addAndMakeVisible(phaseButton);
     phaseButton.setTooltip("This flips the phase of your audio.");
+    phaseAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, phaseID, phaseButton);
     
     tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::backgroundColourId, juce::Colour::fromRGB(0, 0, 0));
     tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::outlineColourId, juce::Colours::whitesmoke.withAlpha(0.5f));

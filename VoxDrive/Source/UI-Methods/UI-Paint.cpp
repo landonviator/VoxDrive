@@ -19,12 +19,13 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     rangeDial.updateLabelColor(masterColor);
     lowpassDial.updateLabelColor(masterColor);
     trimDial.updateLabelColor(masterColor);
+    mixFader.updateLabelColor(masterColor);
     
     //Circuit
     auto circuitScale = 0.55f;
     auto circuit = juce::ImageCache::getFromMemory(BinaryData::VoxDriveCircuit_png, BinaryData::VoxDriveCircuit_pngSize);
     
-    if (!imageAlphaChanged) circuit.multiplyAllAlphas(0.15f);
+    if (!imageAlphaChanged) circuit.multiplyAllAlphas(0.3f);
     imageAlphaChanged = true;
     
     g.drawImageWithin

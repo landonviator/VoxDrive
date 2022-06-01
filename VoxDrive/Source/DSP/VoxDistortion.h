@@ -42,7 +42,15 @@ public:
             
             for (size_t sample = 0; sample < len; ++sample)
             {
-                output[sample] = processSample(input[sample], channel);
+                if (mPhase)
+                {
+                    output[sample] = processSample(input[sample], channel) * -1.0f;
+                }
+                
+                else
+                {
+                    output[sample] = processSample(input[sample], channel);
+                }
             }
         }
     }
@@ -65,7 +73,7 @@ public:
         
         auto output = lowBand + lpFilter.processSample(ch, highDistort);
         
-        return (1.0 - mMix.getNextValue()) * newInput + mMix.getNextValue() * output * mTrim.getNextValue();
+        return ((1.0 - mMix.getNextValue()) * (lowBand + highBand)) + ((output * mMix.getNextValue()) * mTrim.getNextValue());
     }
     
     void setDrive(SampleType newDrive);
@@ -78,6 +86,8 @@ public:
     
     void setTrim(SampleType newTrim);
     
+    void setPhase(SampleType newPhase);
+    
 private:
     float mSampleRate;
     juce::SmoothedValue<float> mDrive;
@@ -85,6 +95,7 @@ private:
     juce::SmoothedValue<float> mMix;
     juce::SmoothedValue<float> mLPCutoff;
     juce::SmoothedValue<float> mTrim;
+    bool mPhase = false;
     
     static constexpr float piDivisor = 2.0 / juce::MathConstants<float>::pi;
     

@@ -85,5 +85,11 @@ void VoxDistortion<SampleType>::setTrim(SampleType newTrim)
     mTrim.setTargetValue(juce::Decibels::decibelsToGain(newTrim));
 }
 
+template <typename SampleType>
+void VoxDistortion<SampleType>::setPhase(SampleType newPhase)
+{
+    mPhase = newPhase;
+}
+
 template class VoxDistortion<float>;
 template class VoxDistortion<double>;

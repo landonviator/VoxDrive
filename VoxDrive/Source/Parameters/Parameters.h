@@ -14,3 +14,9 @@
 
 #define trimID  "trim"
 #define trimName  "Trim"
+
+#define phaseID  "phase"
+#define phaseName  "Phase"
+
+#define hqID  "hq"
+#define hqName  "HQ"

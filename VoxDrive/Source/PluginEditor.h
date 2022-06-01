@@ -75,6 +75,10 @@ private:
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> rangeAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> lowpassAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> trimAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> mixAttach;
+    
+    std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> hqAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> phaseAttach;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };

@@ -13,12 +13,12 @@
 VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor& p)
 : AudioProcessorEditor (&p), audioProcessor (p), headerComponent(audioProcessor)
 , settingsPage(audioProcessor)
-, driveDial(2, " dB", "Drive", 0.0, 24.0)
+, driveDial(2, " dB", "Drive", 0.0, 50.0)
 , rangeDial(1, " Hz", "Range", 500.0, 20000.0)
 , lowpassDial(1, " Hz", "LP", 1000.0, 20000.0)
 , trimDial(1, " dB", "Trim", -24.0, 24.0)
 , mixFader(129, false, "Mix")
-, osButton(true, "OS")
+, osButton(true, "HQ")
 , phaseButton(true, "Phase")
 {
     uiConstructor();
