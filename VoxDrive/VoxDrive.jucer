@@ -88,6 +88,8 @@
                 file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.cpp"/>
           <FILE id="KXSETS" name="ToolTipSettingsComp.h" compile="0" resource="0"
                 file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.h"/>
+          <FILE id="KohYQ4" name="TwitchComp.cpp" compile="1" resource="0" file="Source/UI-Components/SettingsComps/TwitchComp.cpp"/>
+          <FILE id="MbEp3y" name="TwitchComp.h" compile="0" resource="0" file="Source/UI-Components/SettingsComps/TwitchComp.h"/>
         </GROUP>
         <FILE id="YmjPJP" name="HeaderComponent.cpp" compile="1" resource="0"
               file="Source/UI-Components/HeaderComponent.cpp"/>

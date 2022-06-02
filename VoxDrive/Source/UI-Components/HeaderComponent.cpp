@@ -5,7 +5,7 @@
 
 HeaderComponent::HeaderComponent(VoxDriveAudioProcessor& p) : audioProcessor(p)
 {
-    startTimerHz(10);
+    startTimerHz(1);
     setName("Header Page");
     
     addAndMakeVisible(settingsButton);
@@ -80,5 +80,6 @@ bool HeaderComponent::getSettingsButtonToggleState()
 
 void HeaderComponent::updateBGColor()
 {
-    repaint();
+    //repaint();
+    //DBG("updateBGColor");
 }

@@ -17,7 +17,7 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     setName("Editor");
     
-    startTimerHz(30);
+    startTimerHz(5);
     
     //Dials
     addAndMakeVisible(driveDial);

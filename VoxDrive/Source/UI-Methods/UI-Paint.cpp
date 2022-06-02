@@ -39,4 +39,6 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
      );
     
     headerComponent.repaint();
+    
+    DBG("Editor Paint Running...");
 }

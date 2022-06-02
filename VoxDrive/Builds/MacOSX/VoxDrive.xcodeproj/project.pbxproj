@@ -68,6 +68,7 @@
 		8494D52CA066E2715D836E6D /* UI-Resized.cpp */ = {isa = PBXBuildFile; fileRef = BA882870B9E5A4EDA2E50340; };
 		8C79D1F06D5A81323F6D03C4 /* include_juce_audio_devices.mm */ = {isa = PBXBuildFile; fileRef = 33435706A457467924F4DB9B; };
 		8CABD8B00B1985D69E849636 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = FD43672DA244DEC11C9D83DE; };
+		8E16A111D1D044E353D8A788 /* TwitchComp.cpp */ = {isa = PBXBuildFile; fileRef = 391969379B725F4D94F8B2F4; };
 		92D4280D4489D188E8C1F235 /* VST3 */ = {isa = PBXBuildFile; fileRef = 9325FE01331C39CA9BC5E3E2; };
 		95F7F5008516AA267AAABA6B /* SettingsButtonLogic.cpp */ = {isa = PBXBuildFile; fileRef = DF94B697D018453CAEAB64A7; };
 		9794BC31C04A8456A388AD62 /* DiscRecording.framework */ = {isa = PBXBuildFile; fileRef = E494ED999DE261AE06200CF0; };
@@ -112,6 +113,7 @@
 		1F4728E3E4A498BFBB7E3604 /* include_juce_audio_processors.mm */ /* include_juce_audio_processors.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_processors.mm; path = ../../JuceLibraryCode/include_juce_audio_processors.mm; sourceTree = SOURCE_ROOT; };
 		20C8F2A5FD45E8651C6F28C0 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		23E2B520769685EA8FF379A1 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		27A909E6B35F319C675ABA2C /* TwitchComp.h */ /* TwitchComp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TwitchComp.h; path = "../../Source/UI-Components/SettingsComps/TwitchComp.h"; sourceTree = SOURCE_ROOT; };
 		28BDD525DBAA0CF183E3B713 /* UI-InitWindow.cpp */ /* UI-InitWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "UI-InitWindow.cpp"; path = "../../Source/UI-Methods/UI-InitWindow.cpp"; sourceTree = SOURCE_ROOT; };
 		2ADEEA7AB8B773DD6869EE7A /* Articulations_line_1.png */ /* Articulations_line_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Articulations_line_1.png; path = ../../Source/Assets/Articulations_line_1.png; sourceTree = SOURCE_ROOT; };
 		2D246BE2933657C8AA53FC9F /* landon55-04.png */ /* landon55-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landon55-04.png"; path = "../../Source/Assets/landon55-04.png"; sourceTree = SOURCE_ROOT; };
@@ -123,6 +125,7 @@
 		35ADA7BE1EB1BAA5216FA5D1 /* back_vu-meter_decore.png */ /* back_vu-meter_decore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back_vu-meter_decore.png"; path = "../../Source/Assets/back_vu-meter_decore.png"; sourceTree = SOURCE_ROOT; };
 		3623E046BC592B58DE609B45 /* Parameters.h */ /* Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Parameters.h; path = ../../Source/Parameters/Parameters.h; sourceTree = SOURCE_ROOT; };
 		3799B850E23118B720C1EA01 /* led_off.png */ /* led_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = led_off.png; path = ../../Source/Assets/led_off.png; sourceTree = SOURCE_ROOT; };
+		391969379B725F4D94F8B2F4 /* TwitchComp.cpp */ /* TwitchComp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TwitchComp.cpp; path = "../../Source/UI-Components/SettingsComps/TwitchComp.cpp"; sourceTree = SOURCE_ROOT; };
 		3A0F6AA407BA6F87EFAA8C36 /* UI-SaveWindow.cpp */ /* UI-SaveWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "UI-SaveWindow.cpp"; path = "../../Source/UI-Methods/UI-SaveWindow.cpp"; sourceTree = SOURCE_ROOT; };
 		3BFB8F2E1420CEA8519FF014 /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		3C1FE72862AB9320E086A8F1 /* AU */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoxDrive.component; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -501,6 +504,8 @@
 				05326F3AEC8CAF391B5B9C81,
 				0A10C9BD2F41D15745EBBCC8,
 				62959C7FB4D02FB7B13558FB,
+				391969379B725F4D94F8B2F4,
+				27A909E6B35F319C675ABA2C,
 			);
 			name = SettingsComps;
 			sourceTree = "<group>";
@@ -811,6 +816,7 @@
 				418ED3426594AE7219AA0DAF,
 				14EE4FDBA2DF1F801A436A11,
 				7EDCC49E2A3C8D9167297877,
+				8E16A111D1D044E353D8A788,
 				F67FD8D1D2180A68B11CEC13,
 				7CD527350CF149A87A5B10A2,
 				388E432B460D37810E26FB02,

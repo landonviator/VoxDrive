@@ -9,6 +9,7 @@
 #include "SettingsComps/MasterColorComp.h"
 #include "SettingsComps/DiscordComp.h"
 #include "SettingsComps/PatreonComp.h"
+#include "SettingsComps/TwitchComp.h"
 
 //==============================================================================
 
@@ -32,6 +33,7 @@ private:
     MasterColorComp masterColorComp;
     DiscordComp discordComp;
     PatreonComp patreonComp;
+    TwitchComp twitchComp;
     
     LabelLAF customLabelLAF;
     
