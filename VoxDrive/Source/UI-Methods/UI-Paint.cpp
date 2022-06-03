@@ -37,8 +37,4 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
         getWidth() * circuitScale,
         juce::RectanglePlacement::stretchToFit
      );
-    
-    headerComponent.repaint();
-    
-    DBG("Editor Paint Running...");
 }

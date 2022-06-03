@@ -22,24 +22,29 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     //Dials
     addAndMakeVisible(driveDial);
     driveDial.setTooltip("This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion.");
+    driveDial.addListener(this);
     driveAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputID, driveDial);
     
     addAndMakeVisible(rangeDial);
     rangeDial.setTooltip("This knob sets the range of frequencies affected by the harmonic distortion. Any frequencies above this range seting will be distorted and anything below will be left unprocessed.");
     rangeDial.setLabelAsInt(true);
+    rangeDial.addListener(this);
     rangeAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, rangeDial);
     
     addAndMakeVisible(lowpassDial);
     lowpassDial.setTooltip("A high cut filter to reduce harsh high frequencies.");
     lowpassDial.setLabelAsInt(true);
+    lowpassDial.addListener(this);
     lowpassAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
     
     addAndMakeVisible(trimDial);
+    trimDial.addListener(this);
     trimDial.setTooltip("A master output volume control.");
     trimAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimID, trimDial);
     
     addAndMakeVisible(mixFader);
     mixFader.setTooltip("The Mix fader mixes the uneffected input from the DAW with the effected processing from the plugin. At the center, the signal will be equal parts processed and processed, while the bottom half will have more uneffected input and the top half with more effected processing.");
+    mixFader.addListener(this);
     mixAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, mixID, mixFader);
     
     addAndMakeVisible(osButton);

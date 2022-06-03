@@ -7,7 +7,6 @@
 #include "../Globals.h"
 
 //==============================================================================
-
 class HeaderComponent  : public juce::Component, private juce::Timer
 {
 public:
@@ -22,10 +21,16 @@ public:
     void timerCallback() override
     {
         cpu = audioProcessor.getCPULoad();
-        cpuLabel.setText(std::to_string(static_cast<int>(cpu)) + "%", juce::dontSendNotification);
+        
+        if (!uiInUse)
+        {
+            cpuLabel.setText(std::to_string(static_cast<int>(cpu)) + "%", juce::dontSendNotification);
+        }
     }
     
     void updateBGColor();
+    
+    void setUIInUse(bool uiIsInUse) { uiInUse = uiIsInUse; };
 
 private:
     
@@ -44,5 +49,6 @@ private:
     juce::HyperlinkButton mWebLink;
     juce::URL mWebUrl {"https://www.patreon.com/ViatorDSP"};
     
+    bool uiInUse = false;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HeaderComponent)
 };

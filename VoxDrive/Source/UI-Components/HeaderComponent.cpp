@@ -15,6 +15,7 @@ HeaderComponent::HeaderComponent(VoxDriveAudioProcessor& p) : audioProcessor(p)
     cpuLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke);
     cpuLabel.setColour(juce::Label::ColourIds::backgroundColourId, juce::Colours::transparentBlack);
     cpuLabel.setLookAndFeel(&customLabelLAF);
+    DBG("Header constructor");
 }
 
 HeaderComponent::~HeaderComponent()
@@ -39,16 +40,16 @@ void HeaderComponent::paint (juce::Graphics& g)
                       getWidth() * 0.6f,
                       getHeight() * 0.65f,
                       juce::RectanglePlacement::centred);
-    
+
     // Patreon link
     mWebLink.setURL(mWebUrl);
     addAndMakeVisible(mWebLink);
     mWebLink.setBounds(getWidth() * -0.22f, getHeight() * 0.2f, getWidth() * 0.6f, getHeight() * 0.65f);
-        
-    
+
+
     g.setColour(juce::Colours::whitesmoke.darker(1.0f).darker(1.0f));
     g.drawLine(0, getHeight(), getWidth(), getHeight(), 2.0f);
-    
+
     //Version string
     g.setColour(masterColor == juce::Colours::black ? juce::Colours::whitesmoke.withAlpha(0.35f) : juce::Colours::whitesmoke);
     float x = getWidth() * 0.425f;
@@ -57,6 +58,7 @@ void HeaderComponent::paint (juce::Graphics& g)
     float height = getHeight() * 0.2f;
     g.setFont(juce::Font ("Helvetica", getWidth() * 0.02f, juce::Font::FontStyleFlags::bold));
     g.drawFittedText("Vox Amp v1.0.0", x, y, width, height, juce::Justification::centred, 1);
+    DBG("Header paint");
 }
 
 void HeaderComponent::resized()
@@ -66,11 +68,12 @@ void HeaderComponent::resized()
     auto buttonWidth = getWidth() * 0.04;
     auto buttonHeight = getHeight() * 0.75;
     auto spaceBetween = 1.25;
-    
+
     cpuLabel.setFont(juce::Font ("Helvetica", getHeight() * 0.35f, juce::Font::FontStyleFlags::bold));
-    
+
     settingsButton.setBounds(rightMargin, buttonTopMargin, buttonWidth, buttonHeight);
     cpuLabel.setBounds(settingsButton.getX() - settingsButton.getWidth() * spaceBetween, buttonTopMargin, buttonWidth, buttonHeight);
+    DBG("Header resized");
 }
 
 bool HeaderComponent::getSettingsButtonToggleState()

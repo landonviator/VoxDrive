@@ -55,7 +55,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
     auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 500.0f);
     auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
     auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.5), 20000.0f);
-    auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
+    auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -60.0f, 24.0f, 0.0f);
     auto pPhase = std::make_unique<juce::AudioParameterBool>(phaseID, phaseName, false);
     auto pHQ = std::make_unique<juce::AudioParameterBool>(hqID, hqName, false);
     
@@ -101,6 +101,8 @@ void VoxDriveAudioProcessor::updateParameters()
     voxDistortionModule.setLPCutoff(treeState.getRawParameterValue(lowpassID)->load());
     voxDistortionModule.setTrim(treeState.getRawParameterValue(trimID)->load());
     voxDistortionModule.setPhase(treeState.getRawParameterValue(phaseID)->load());
+    
+    treeState.getParameterAsValue(trimID) = treeState.getRawParameterValue(inputID)->load() * -0.5f;
 }
 
 //==============================================================================

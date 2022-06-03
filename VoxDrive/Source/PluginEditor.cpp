@@ -16,7 +16,7 @@ VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcess
 , driveDial(2, " dB", "Drive", 0.0, 50.0)
 , rangeDial(1, " Hz", "Range", 500.0, 20000.0)
 , lowpassDial(1, " Hz", "LP", 1000.0, 20000.0)
-, trimDial(1, " dB", "Trim", -24.0, 24.0)
+, trimDial(1, " dB", "Trim", -60.0, 24.0)
 , mixFader(129, false, "Mix")
 , osButton(true, "HQ")
 , phaseButton(true, "Phase")
@@ -43,4 +43,19 @@ void VoxDriveAudioProcessorEditor::showToolTip(bool shouldShowTips)
 {
     tooltipWindow.setEnabled(shouldShowTips);
     tooltipWindow.setVisible(shouldShowTips);
+}
+
+void VoxDriveAudioProcessorEditor::sliderValueChanged(juce::Slider *slider)
+{
+    
+}
+
+void VoxDriveAudioProcessorEditor::sliderDragStarted(juce::Slider*)
+{
+    headerComponent.setUIInUse(true);
+}
+
+void VoxDriveAudioProcessorEditor::sliderDragEnded(juce::Slider*)
+{
+    headerComponent.setUIInUse(false);
 }
