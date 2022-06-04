@@ -60,7 +60,8 @@ private:
     void setSettingsPageBounds();
     juce::ComponentAnimator settingsPageAnimator;
     
-    juce::TooltipWindow tooltipWindow{nullptr, 500};
+    juce::TooltipWindow tooltipWindow;
+    
     void showToolTip(bool shouldShowTips);
     
     viator_gui::FilmStripKnob driveDial;

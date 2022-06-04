@@ -22,7 +22,7 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     mixFader.updateLabelColor(masterColor);
     
     //Circuit
-    auto circuitScale = 0.55f;
+    auto circuitScale = 0.4f;
     auto circuit = juce::ImageCache::getFromMemory(BinaryData::VoxDriveCircuit_png, BinaryData::VoxDriveCircuit_pngSize);
     
     if (!imageAlphaChanged) circuit.multiplyAllAlphas(0.3f);
@@ -31,9 +31,9 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     g.drawImageWithin
     (
         circuit,
-        getWidth() * 0.095f,
-        getHeight() * 0.12f,
-        getWidth() * 0.4168f * circuitScale,
+        getWidth() * 0.09f,
+        getHeight() * 0.2f,
+        getWidth() * 0.59006f * circuitScale,
         getWidth() * circuitScale,
         juce::RectanglePlacement::stretchToFit
      );

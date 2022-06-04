@@ -33,6 +33,7 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(hqID, this);
     
     variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
+    variableTree.setProperty("tooltip", 1, nullptr);
     cpuLoad.store(0.0f);
 }
 
@@ -55,7 +56,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
     auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 500.0f);
     auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
     auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.5), 20000.0f);
-    auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -60.0f, 24.0f, 0.0f);
+    auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
     auto pPhase = std::make_unique<juce::AudioParameterBool>(phaseID, phaseName, false);
     auto pHQ = std::make_unique<juce::AudioParameterBool>(hqID, hqName, false);
     
@@ -78,6 +79,7 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
         if (treeState.getRawParameterValue(hqID)->load())
         {
             spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
+            lowShelf.prepare(spec);
             voxDistortionModule.prepare(spec);
             cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
         }
@@ -85,6 +87,7 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
         else
         {
             spec.sampleRate = getSampleRate();
+            lowShelf.prepare(spec);
             voxDistortionModule.prepare(spec);
             cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
         }
@@ -95,14 +98,28 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
 
 void VoxDriveAudioProcessor::updateParameters()
 {
+    lowShelf.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 200.0f);
+    lowShelf.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQ, 0.3f);
+    lowShelf.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
+    lowShelf.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kLowShelf);
+    
+    if (treeState.getRawParameterValue(inputID)->load() <= 24)
+    {
+        lowShelf.setParameter(viator_dsp::SVFilter<float>::ParameterId::kGain, treeState.getRawParameterValue(inputID)->load() * 0.5f - juce::jmap(treeState.getRawParameterValue(mixID)->load(), 0.0f, 100.0f, 12.0f, 0.0f));
+    }
+    
+    else
+    {
+        lowShelf.setParameter(viator_dsp::SVFilter<float>::ParameterId::kGain, 12.0f - juce::jmap(treeState.getRawParameterValue(mixID)->load(), 0.0f, 100.0f, 12.0f, 0.0f));
+    }
+    
+    
     voxDistortionModule.setDrive(treeState.getRawParameterValue(inputID)->load());
     voxDistortionModule.setCutoff(treeState.getRawParameterValue(cutoffID)->load());
     voxDistortionModule.setMix(treeState.getRawParameterValue(mixID)->load());
     voxDistortionModule.setLPCutoff(treeState.getRawParameterValue(lowpassID)->load());
-    voxDistortionModule.setTrim(treeState.getRawParameterValue(trimID)->load());
+    voxDistortionModule.setTrim(treeState.getRawParameterValue(trimID)->load() - treeState.getRawParameterValue(inputID)->load() * 0.5f);
     voxDistortionModule.setPhase(treeState.getRawParameterValue(phaseID)->load());
-    
-    treeState.getParameterAsValue(trimID) = treeState.getRawParameterValue(inputID)->load() * -0.5f;
 }
 
 //==============================================================================
@@ -192,6 +209,7 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
     
+    lowShelf.prepare(spec);
     voxDistortionModule.prepare(spec);
     updateParameters();
     
@@ -245,6 +263,7 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     if (treeState.getRawParameterValue(hqID)->load())
     {
         upSampledBlock = oversamplingModule.processSamplesUp(audioBlock);
+        lowShelf.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         oversamplingModule.processSamplesDown(audioBlock);
     }
@@ -252,6 +271,7 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     // Don't Oversample if OFF
     else
     {
+        lowShelf.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
         voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     }
     

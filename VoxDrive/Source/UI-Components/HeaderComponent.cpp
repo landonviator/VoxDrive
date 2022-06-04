@@ -15,7 +15,6 @@ HeaderComponent::HeaderComponent(VoxDriveAudioProcessor& p) : audioProcessor(p)
     cpuLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke);
     cpuLabel.setColour(juce::Label::ColourIds::backgroundColourId, juce::Colours::transparentBlack);
     cpuLabel.setLookAndFeel(&customLabelLAF);
-    DBG("Header constructor");
 }
 
 HeaderComponent::~HeaderComponent()
@@ -29,7 +28,7 @@ void HeaderComponent::paint (juce::Graphics& g)
     //Header
     juce::Rectangle<float> headerRect;
     headerRect.setBounds(0.0f, 0.0f, getWidth(), getHeight());
-    g.setColour(masterColor);
+    g.setColour(masterColor == juce::Colours::black ? juce::Colour::fromRGB(21, 21, 21) : masterColor);
     g.fillRect(headerRect);
     
     // Logo layer
@@ -51,14 +50,13 @@ void HeaderComponent::paint (juce::Graphics& g)
     g.drawLine(0, getHeight(), getWidth(), getHeight(), 2.0f);
 
     //Version string
-    g.setColour(masterColor == juce::Colours::black ? juce::Colours::whitesmoke.withAlpha(0.35f) : juce::Colours::whitesmoke);
+    g.setColour(juce::Colours::whitesmoke);
     float x = getWidth() * 0.425f;
     float y = getHeight() * 0.45f;
     float width = getWidth() * 0.15f;
     float height = getHeight() * 0.2f;
     g.setFont(juce::Font ("Helvetica", getWidth() * 0.02f, juce::Font::FontStyleFlags::bold));
     g.drawFittedText("Vox Amp v1.0.0", x, y, width, height, juce::Justification::centred, 1);
-    DBG("Header paint");
 }
 
 void HeaderComponent::resized()
@@ -73,7 +71,6 @@ void HeaderComponent::resized()
 
     settingsButton.setBounds(rightMargin, buttonTopMargin, buttonWidth, buttonHeight);
     cpuLabel.setBounds(settingsButton.getX() - settingsButton.getWidth() * spaceBetween, buttonTopMargin, buttonWidth, buttonHeight);
-    DBG("Header resized");
 }
 
 bool HeaderComponent::getSettingsButtonToggleState()

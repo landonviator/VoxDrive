@@ -5,8 +5,8 @@
 
 ToolTipSettingsComp::ToolTipSettingsComp(VoxDriveAudioProcessor& p) : audioProcessor(p)
 {
-    toolTipToggle.setToggleState(audioProcessor.variableTree.getProperty("tooltip"), juce::dontSendNotification);
     shouldUseToolTips = audioProcessor.variableTree.getProperty("tooltip");
+    toolTipToggle.setToggleState(audioProcessor.variableTree.getProperty("tooltip"), juce::dontSendNotification);
     
     /** Tooltip Toggle */
     addAndMakeVisible(toolTipToggle);

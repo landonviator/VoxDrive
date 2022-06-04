@@ -76,6 +76,7 @@ private:
     VoxDistortion<float> voxDistortionModule;
     juce::dsp::Oversampling<float> oversamplingModule;
     juce::dsp::ProcessSpec spec;
+    viator_dsp::SVFilter<float> lowShelf;
     
     juce::AudioProcessLoadMeasurer cpuMeasureModule;
     std::atomic<float> cpuLoad;

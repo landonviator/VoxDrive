@@ -67,8 +67,6 @@ public:
         
         highDistort *= 1.75;
         
-        //highDistort *= juce::Decibels::decibelsToGain(-mDrive.getNextValue());
-        
         lpFilter.setCutoffFrequency(mLPCutoff.getNextValue());
         
         auto output = lowBand + lpFilter.processSample(ch, highDistort);

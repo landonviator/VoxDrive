@@ -21,7 +21,7 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     //Dials
     addAndMakeVisible(driveDial);
-    driveDial.setTooltip("This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion.");
+    driveDial.setTooltip("This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion. Increasing the drive also increases a hard-coded low shelf to compensate for the perceived attenutation of the low end.");
     driveDial.addListener(this);
     driveAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputID, driveDial);
     
@@ -60,7 +60,5 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.75f));
     
     addAndMakeVisible(headerComponent);
-    
     addAndMakeVisible(settingsPage);
-    showToolTip(settingsPage.getShouldUseToolTips());
 }
