@@ -20,6 +20,8 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     lowpassDial.updateLabelColor(masterColor);
     trimDial.updateLabelColor(masterColor);
     mixFader.updateLabelColor(masterColor);
+    osButton.updateLabelColor(masterColor);
+    phaseButton.updateLabelColor(masterColor);
     
     //Circuit
     auto circuitScale = 0.4f;

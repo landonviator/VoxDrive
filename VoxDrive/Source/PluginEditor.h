@@ -12,13 +12,11 @@
 #include "PluginProcessor.h"
 #include "./UI-Components/HeaderComponent.h"
 #include "./UI-Components/SettingsPage.h"
-#include "./UI-Components/SettingsComps/ToolTipSettingsComp.h"
 
 //==============================================================================
 /**
 */
 class VoxDriveAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Slider::Listener
-, private juce::Timer
 {
 public:
     VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor&);
@@ -28,15 +26,13 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
     
-    void timerCallback() override
-    {
-        showToolTip(settingsPage.getShouldUseToolTips());
-    }
-    
     void sliderValueChanged(juce::Slider* slider) override;
-    void sliderDragStarted (juce::Slider*) override;
+    void sliderDragStarted (juce::Slider* slider) override;
     void sliderDragEnded (juce::Slider*) override;
-
+    
+    void mouseEnter(const juce::MouseEvent &event) override;
+    void mouseExit(const juce::MouseEvent &event) override;
+    
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
@@ -60,10 +56,6 @@ private:
     void setSettingsPageBounds();
     juce::ComponentAnimator settingsPageAnimator;
     
-    juce::TooltipWindow tooltipWindow;
-    
-    void showToolTip(bool shouldShowTips);
-    
     viator_gui::FilmStripKnob driveDial;
     viator_gui::FilmStripKnob rangeDial;
     viator_gui::FilmStripKnob lowpassDial;
@@ -84,6 +76,50 @@ private:
     
     std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> hqAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> phaseAttach;
+    
+    juce::String driveToolTip =
+    {
+        "This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion. Increasing the drive also increases a hard-coded low shelf."
+    };
+    
+    juce::String rangeToolTip =
+    {
+        "This knob sets the range of frequencies affected by the harmonic distortion."
+    };
+    
+    juce::String lowpassToolTip =
+    {
+        "This dial sets the cutoff for a lowpass (high cut) filter."
+    };
+    
+    juce::String trimToolTip =
+    {
+        "A master output volume control."
+    };
+    
+    juce::String mixToolTip =
+    {
+        "The Mix fader mixes the uneffected input from the DAW with the effected processing from the plugin."
+    };
+    
+    juce::String hqToolTip =
+    {
+        "This turns on oversampling, which raises the quality of the effect and avoids aliasing in the non-linear processing."
+    };
+    
+    juce::String phaseToolTip =
+    {
+        "This flips the phase of your audio."
+    };
+    
+    juce::Rectangle<float> tooltipWindow;
+    juce::Label tooltipContent;
+    
+    std::vector<juce::Slider*> sliders = {&driveDial, &rangeDial, &lowpassDial, &trimDial, &mixFader};
+    std::vector<juce::String> sliderLabels = {driveToolTip, rangeToolTip, lowpassToolTip, trimToolTip, mixToolTip};
+    
+    std::vector<juce::ImageButton*> buttons = {&osButton, &phaseButton};
+    std::vector<juce::String> buttonLabels = {hqToolTip, phaseToolTip};
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };

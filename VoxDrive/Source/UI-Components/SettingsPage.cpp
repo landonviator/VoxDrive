@@ -3,10 +3,9 @@
 
 //==============================================================================
 
-SettingsPage::SettingsPage(VoxDriveAudioProcessor& p) : audioProcessor(p), tooltipSettingsComp(audioProcessor), masterColorComp(audioProcessor)
+SettingsPage::SettingsPage(VoxDriveAudioProcessor& p) : audioProcessor(p), masterColorComp(audioProcessor)
 {
     setName("Settings Page");
-    addAndMakeVisible(tooltipSettingsComp);
     addAndMakeVisible(masterColorComp);
     addAndMakeVisible(discordComp);
     addAndMakeVisible(patreonComp);
@@ -33,14 +32,8 @@ void SettingsPage::resized()
 {
     rowheight = getHeight() * 0.075;
     
-    tooltipSettingsComp.setBounds(0, rowheight, getWidth(), rowheight);
-    masterColorComp.setBounds(0, tooltipSettingsComp.getY() + tooltipSettingsComp.getHeight(), getWidth(), rowheight);
+    masterColorComp.setBounds(0, rowheight, getWidth(), rowheight);
     discordComp.setBounds(0, masterColorComp.getY() + masterColorComp.getHeight(), getWidth(), rowheight);
     patreonComp.setBounds(0, discordComp.getY() + discordComp.getHeight(), getWidth(), rowheight);
     twitchComp.setBounds(0, patreonComp.getY() + patreonComp.getHeight(), getWidth(), rowheight);
-}
-
-bool SettingsPage::getShouldUseToolTips()
-{
-    return tooltipSettingsComp.getShouldUseToolTips();
 }

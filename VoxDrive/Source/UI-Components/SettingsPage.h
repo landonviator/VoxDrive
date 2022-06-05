@@ -5,7 +5,6 @@
 #include "../LookAndFeel/LabelLAF.h"
 #include "../LookAndFeel/ColorButtonLAF.h"
 #include "../Globals.h"
-#include "SettingsComps/ToolTipSettingsComp.h"
 #include "SettingsComps/MasterColorComp.h"
 #include "SettingsComps/DiscordComp.h"
 #include "SettingsComps/PatreonComp.h"
@@ -21,7 +20,6 @@ public:
 
     void paint (juce::Graphics&) override;
     void resized() override;
-    bool getShouldUseToolTips();
 private:
     
     VoxDriveAudioProcessor& audioProcessor;
@@ -29,7 +27,6 @@ private:
     juce::Slider menuSlider1;
     MenuSliderLAF customMenuSlider;
     
-    ToolTipSettingsComp tooltipSettingsComp;
     MasterColorComp masterColorComp;
     DiscordComp discordComp;
     PatreonComp patreonComp;

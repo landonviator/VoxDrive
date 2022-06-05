@@ -49,6 +49,10 @@ void VoxDriveAudioProcessorEditor::uiResized()
     osButton.setBounds(leftButtonMargin, topButtonMargin, buttonWidth, buttonHeight);
     phaseButton.setBounds(osButton.getX() + osButton.getWidth() * buttonSpaceBetween, topButtonMargin, buttonWidth, buttonHeight);
     
+    auto toolHeight = getHeight() * 0.06f;
+    tooltipContent.setFont(juce::Font ("Helvetica", getHeight() * 0.02f, juce::Font::FontStyleFlags::bold));
+    tooltipContent.setBounds(0, topMargin, getWidth(), toolHeight);
+    
     // Save plugin size in the tree
     saveWindowSize();
 }

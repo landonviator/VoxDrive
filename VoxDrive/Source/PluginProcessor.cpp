@@ -33,7 +33,6 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(hqID, this);
     
     variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
-    variableTree.setProperty("tooltip", 1, nullptr);
     cpuLoad.store(0.0f);
 }
 

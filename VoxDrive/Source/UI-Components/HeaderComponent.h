@@ -42,6 +42,7 @@ private:
     void settingsButtonProps();
     
     juce::Label cpuLabel;
+    juce::Label cpuTitleLabel;
     float cpu = 0;
     LabelLAF customLabelLAF;
     

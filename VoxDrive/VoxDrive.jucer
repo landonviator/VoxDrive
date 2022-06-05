@@ -17,10 +17,7 @@
               file="Source/Assets/Articulations_line_1.png"/>
         <FILE id="Tkbx72" name="Articulations_line_2.png" compile="0" resource="1"
               file="Source/Assets/Articulations_line_2.png"/>
-        <FILE id="PE3tIk" name="back_vu-meter_decore.png" compile="0" resource="1"
-              file="Source/Assets/back_vu-meter_decore.png"/>
         <FILE id="S8iSYs" name="background.png" compile="0" resource="1" file="Source/Assets/background.png"/>
-        <FILE id="aYrxlP" name="btclipper.png" compile="0" resource="1" file="Source/Assets/btclipper.png"/>
         <FILE id="DSmAaC" name="button_middle_off.png" compile="0" resource="1"
               file="Source/Assets/button_middle_off.png"/>
         <FILE id="cIufQt" name="button_middle_on.png" compile="0" resource="1"
@@ -29,15 +26,11 @@
               file="Source/Assets/button_small_off.png"/>
         <FILE id="q8kkHC" name="button_small_on.png" compile="0" resource="1"
               file="Source/Assets/button_small_on.png"/>
+        <FILE id="RssTZv" name="gear-01.png" compile="0" resource="1" file="Source/Assets/gear-01.png"/>
         <FILE id="YR3KNP" name="knob_big.png" compile="0" resource="1" file="Source/Assets/knob_big.png"/>
         <FILE id="PNPyEN" name="knob_middle.png" compile="0" resource="1" file="Source/Assets/knob_middle.png"/>
         <FILE id="fgT0Ig" name="knob_small.png" compile="0" resource="1" file="Source/Assets/knob_small.png"/>
         <FILE id="sRoB84" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
-        <FILE id="GNhFfp" name="led_off.png" compile="0" resource="1" file="Source/Assets/led_off.png"/>
-        <FILE id="vopGpR" name="led_on.png" compile="0" resource="1" file="Source/Assets/led_on.png"/>
-        <FILE id="RcUE4d" name="pluginBackground2.png" compile="0" resource="1"
-              file="Source/Assets/pluginBackground2.png"/>
-        <FILE id="HOsfVo" name="projucer.png" compile="0" resource="1" file="Source/Assets/projucer.png"/>
         <FILE id="nKoa0d" name="scale_Horizontal slider.png" compile="0" resource="1"
               file="Source/Assets/scale_Horizontal slider.png"/>
         <FILE id="oYOYbi" name="scale_knob big.png" compile="0" resource="1"
@@ -48,8 +41,6 @@
               file="Source/Assets/scale_knob small_.png"/>
         <FILE id="ykZeEL" name="slider_horizontal.png" compile="0" resource="1"
               file="Source/Assets/slider_horizontal.png"/>
-        <FILE id="SM4aIF" name="slider_vertical.png" compile="0" resource="1"
-              file="Source/Assets/slider_vertical.png"/>
         <FILE id="cnu9tM" name="VoxDriveCircuit.png" compile="0" resource="1"
               file="Source/Assets/VoxDriveCircuit.png"/>
       </GROUP>
@@ -84,10 +75,6 @@
                 file="Source/UI-Components/SettingsComps/MasterColorComp.h"/>
           <FILE id="D3B8LY" name="PatreonComp.cpp" compile="1" resource="0" file="Source/UI-Components/SettingsComps/PatreonComp.cpp"/>
           <FILE id="d2tvlQ" name="PatreonComp.h" compile="0" resource="0" file="Source/UI-Components/SettingsComps/PatreonComp.h"/>
-          <FILE id="DBkDVD" name="ToolTipSettingsComp.cpp" compile="1" resource="0"
-                file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.cpp"/>
-          <FILE id="KXSETS" name="ToolTipSettingsComp.h" compile="0" resource="0"
-                file="Source/UI-Components/SettingsComps/ToolTipSettingsComp.h"/>
           <FILE id="KohYQ4" name="TwitchComp.cpp" compile="1" resource="0" file="Source/UI-Components/SettingsComps/TwitchComp.cpp"/>
           <FILE id="MbEp3y" name="TwitchComp.h" compile="0" resource="0" file="Source/UI-Components/SettingsComps/TwitchComp.h"/>
         </GROUP>

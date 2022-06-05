@@ -17,48 +17,51 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     setName("Editor");
     
-    startTimerHz(5);
-    
     //Dials
     addAndMakeVisible(driveDial);
-    driveDial.setTooltip("This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion. Increasing the drive also increases a hard-coded low shelf to compensate for the perceived attenutation of the low end.");
     driveDial.addListener(this);
+    driveDial.addMouseListener(this, false);
     driveAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputID, driveDial);
     
     addAndMakeVisible(rangeDial);
-    rangeDial.setTooltip("This knob sets the range of frequencies affected by the harmonic distortion. Any frequencies above this range seting will be distorted and anything below will be left unprocessed.");
     rangeDial.setLabelAsInt(true);
     rangeDial.addListener(this);
+    rangeDial.addMouseListener(this, false);
     rangeAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, rangeDial);
     
     addAndMakeVisible(lowpassDial);
-    lowpassDial.setTooltip("A high cut filter to reduce harsh high frequencies.");
     lowpassDial.setLabelAsInt(true);
     lowpassDial.addListener(this);
+    lowpassDial.addMouseListener(this, false);
     lowpassAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
     
     addAndMakeVisible(trimDial);
     trimDial.addListener(this);
-    trimDial.setTooltip("A master output volume control.");
+    trimDial.addMouseListener(this, false);
     trimAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimID, trimDial);
     
     addAndMakeVisible(mixFader);
-    mixFader.setTooltip("The Mix fader mixes the uneffected input from the DAW with the effected processing from the plugin. At the center, the signal will be equal parts processed and processed, while the bottom half will have more uneffected input and the top half with more effected processing.");
     mixFader.addListener(this);
+    mixFader.addMouseListener(this, false);
     mixAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, mixID, mixFader);
     
     addAndMakeVisible(osButton);
-    osButton.setTooltip("This turns on oversampling, which raises the quality of the effect and avoids aliasing in the non-linear processing.");
+    osButton.addMouseListener(this, false);
     hqAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, hqID, osButton);
     
     addAndMakeVisible(phaseButton);
-    phaseButton.setTooltip("This flips the phase of your audio.");
+    phaseButton.addMouseListener(this, false);
     phaseAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, phaseID, phaseButton);
-    
-    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::backgroundColourId, juce::Colour::fromRGB(0, 0, 0));
-    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::outlineColourId, juce::Colours::whitesmoke.withAlpha(0.5f));
-    tooltipWindow.getLookAndFeel().setColour(juce::TooltipWindow::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.75f));
     
     addAndMakeVisible(headerComponent);
     addAndMakeVisible(settingsPage);
+    
+    addAndMakeVisible(tooltipContent);
+    tooltipContent.setColour(0x1000280, juce::Colours::transparentBlack);
+    tooltipContent.setColour(0x1000282, juce::Colours::transparentBlack);
+    tooltipContent.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.5f));
+    tooltipContent.setJustificationType(juce::Justification::horizontallyCentred);
+    tooltipContent.setFont(juce::Font ("Helvetica", getHeight() * 0.02f, juce::Font::FontStyleFlags::bold));
+
+    
 }

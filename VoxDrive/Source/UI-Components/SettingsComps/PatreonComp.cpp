@@ -34,8 +34,8 @@ void PatreonComp::paint (juce::Graphics& g)
     mWebLink.setBounds(getLocalBounds());
     
     g.setColour(juce::Colours::dimgrey);
-    g.setFont(juce::Font ("Helvetica", getHeight() * 0.45f, juce::Font::FontStyleFlags::bold));
-    g.drawFittedText("Click to support/donate!", getLocalBounds(), juce::Justification::centred, 1);
+    g.setFont(juce::Font ("Helvetica", getHeight() * 0.4f, juce::Font::FontStyleFlags::bold));
+    g.drawFittedText("Click to support or view my other plugins!", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void PatreonComp::resized()

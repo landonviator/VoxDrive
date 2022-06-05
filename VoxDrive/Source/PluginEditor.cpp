@@ -39,18 +39,11 @@ void VoxDriveAudioProcessorEditor::resized()
     uiResized();
 }
 
-void VoxDriveAudioProcessorEditor::showToolTip(bool shouldShowTips)
-{
-    tooltipWindow.setEnabled(shouldShowTips);
-    tooltipWindow.setVisible(shouldShowTips);
-}
-
 void VoxDriveAudioProcessorEditor::sliderValueChanged(juce::Slider *slider)
 {
-    
 }
 
-void VoxDriveAudioProcessorEditor::sliderDragStarted(juce::Slider*)
+void VoxDriveAudioProcessorEditor::sliderDragStarted(juce::Slider* slider)
 {
     headerComponent.setUIInUse(true);
 }
@@ -58,4 +51,46 @@ void VoxDriveAudioProcessorEditor::sliderDragStarted(juce::Slider*)
 void VoxDriveAudioProcessorEditor::sliderDragEnded(juce::Slider*)
 {
     headerComponent.setUIInUse(false);
+}
+
+void VoxDriveAudioProcessorEditor::mouseEnter(const juce::MouseEvent &event)
+{
+    //sliders
+    for (int i = 0; i < sliders.size(); ++i)
+    {
+        if (event.eventComponent == sliders[i])
+        {
+            tooltipContent.setText(sliderLabels[i], juce::dontSendNotification);
+        }
+    }
+    
+    //buttons
+    for (int i = 0; i < buttons.size(); ++i)
+    {
+        if (event.eventComponent == buttons[i])
+        {
+            tooltipContent.setText(buttonLabels[i], juce::dontSendNotification);
+        }
+    }
+}
+
+void VoxDriveAudioProcessorEditor::mouseExit(const juce::MouseEvent &event)
+{
+    //sliders
+    for (int i = 0; i < sliders.size(); ++i)
+    {
+        if (event.eventComponent == sliders[i])
+        {
+            tooltipContent.setText("", juce::dontSendNotification);
+        }
+    }
+    
+    //buttons
+    for (int i = 0; i < buttons.size(); ++i)
+    {
+        if (event.eventComponent == buttons[i])
+        {
+            tooltipContent.setText("", juce::dontSendNotification);
+        }
+    }
 }

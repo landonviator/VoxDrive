@@ -12,7 +12,7 @@
 		<key>VoxDrive - All.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>VoxDrive - Shared Code.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,7 +22,7 @@
 		<key>VoxDrive - Standalone Plugin.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>VoxDrive - VST3.xcscheme_^#shared#^_</key>
 		<dict>
@@ -33,6 +33,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>265D8548A6D15F6BB712AB02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4FEF7F864691175F0627A55B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

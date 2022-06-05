@@ -26,6 +26,7 @@ void SettingsButtonLAF::drawButtonBackground (juce::Graphics& g,
     g.setColour (button.findColour (juce::ComboBox::outlineColourId));
     g.drawRoundedRectangle (bounds, cornerSize, 1.0f);
     
-    g.drawEllipse(bounds.withSizeKeepingCentre(bounds.getHeight() * 0.75, bounds.getHeight() * 0.75), 1.0f);
-    g.drawEllipse(bounds.withSizeKeepingCentre(bounds.getHeight() * 0.5, bounds.getHeight() * 0.5), 1.0f);
+    // Gear
+    auto gear = juce::ImageCache::getFromMemory(BinaryData::gear01_png, BinaryData::gear01_pngSize);
+    g.drawImageWithin(gear, 0, 0, bounds.getWidth(), bounds.getHeight(), juce::RectanglePlacement::stretchToFit);
 }
