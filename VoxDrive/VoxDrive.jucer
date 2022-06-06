@@ -26,21 +26,8 @@
               file="Source/Assets/button_small_off.png"/>
         <FILE id="q8kkHC" name="button_small_on.png" compile="0" resource="1"
               file="Source/Assets/button_small_on.png"/>
-        <FILE id="RssTZv" name="gear-01.png" compile="0" resource="1" file="Source/Assets/gear-01.png"/>
-        <FILE id="YR3KNP" name="knob_big.png" compile="0" resource="1" file="Source/Assets/knob_big.png"/>
-        <FILE id="PNPyEN" name="knob_middle.png" compile="0" resource="1" file="Source/Assets/knob_middle.png"/>
-        <FILE id="fgT0Ig" name="knob_small.png" compile="0" resource="1" file="Source/Assets/knob_small.png"/>
+        <FILE id="RssTZv" name="gear01.png" compile="0" resource="1" file="Source/Assets/gear01.png"/>
         <FILE id="sRoB84" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
-        <FILE id="nKoa0d" name="scale_Horizontal slider.png" compile="0" resource="1"
-              file="Source/Assets/scale_Horizontal slider.png"/>
-        <FILE id="oYOYbi" name="scale_knob big.png" compile="0" resource="1"
-              file="Source/Assets/scale_knob big.png"/>
-        <FILE id="HL4OXp" name="scale_knob middle.png" compile="0" resource="1"
-              file="Source/Assets/scale_knob middle.png"/>
-        <FILE id="fHPZEv" name="scale_knob small_.png" compile="0" resource="1"
-              file="Source/Assets/scale_knob small_.png"/>
-        <FILE id="ykZeEL" name="slider_horizontal.png" compile="0" resource="1"
-              file="Source/Assets/slider_horizontal.png"/>
         <FILE id="cnu9tM" name="VoxDriveCircuit.png" compile="0" resource="1"
               file="Source/Assets/VoxDriveCircuit.png"/>
       </GROUP>

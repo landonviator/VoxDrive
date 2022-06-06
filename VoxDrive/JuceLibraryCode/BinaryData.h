@@ -38,38 +38,14 @@ namespace BinaryData
     extern const char*   gear01_png;
     const int            gear01_pngSize = 32921;
 
-    extern const char*   knob_big_png;
-    const int            knob_big_pngSize = 72888350;
-
-    extern const char*   knob_middle_png;
-    const int            knob_middle_pngSize = 6154768;
-
-    extern const char*   knob_small_png;
-    const int            knob_small_pngSize = 2667859;
-
     extern const char*   landon5504_png;
     const int            landon5504_pngSize = 26270;
-
-    extern const char*   scale_Horizontal_slider_png;
-    const int            scale_Horizontal_slider_pngSize = 870;
-
-    extern const char*   scale_knob_big_png;
-    const int            scale_knob_big_pngSize = 4086;
-
-    extern const char*   scale_knob_middle_png;
-    const int            scale_knob_middle_pngSize = 1694;
-
-    extern const char*   scale_knob_small__png;
-    const int            scale_knob_small__pngSize = 1449;
-
-    extern const char*   slider_horizontal_png;
-    const int            slider_horizontal_pngSize = 1836423;
 
     extern const char*   VoxDriveCircuit_png;
     const int            VoxDriveCircuit_pngSize = 15573;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 20;
+    const int namedResourceListSize = 12;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

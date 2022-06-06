@@ -33,11 +33,10 @@ void VoxDriveAudioProcessorEditor::uiResized()
     trimDial.setBounds(rightMargin, space2, dialSize, dialSize);
 
     //Mix fader
-    auto x = getWidth() * 0.36f;
-    auto y = getHeight() * 0.75f;
-    auto ratio = 0.388889f;
-    auto size = getWidth() * 0.28f;
-    mixFader.setBounds(x, y, size, size * ratio);
+    auto x = getWidth() * 0.425f;
+    auto y = getHeight() * 0.69f;
+    dialSize *= 1.25;
+    mixFader.setBounds(x, y, dialSize, dialSize);
     
     //Buttons
     auto leftButtonMargin = getWidth() * 0.095f;
