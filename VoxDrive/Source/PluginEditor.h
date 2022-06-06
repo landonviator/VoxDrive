@@ -56,12 +56,11 @@ private:
     void setSettingsPageBounds();
     juce::ComponentAnimator settingsPageAnimator;
     
-    viator_gui::FilmStripKnob driveDial;
-    viator_gui::FilmStripKnob rangeDial;
-    viator_gui::FilmStripKnob lowpassDial;
-    viator_gui::FilmStripKnob trimDial;
-    
-    viator_gui::FilmStripFader mixFader;
+    viator_gui::Dial driveDial;
+    viator_gui::Dial rangeDial;
+    viator_gui::Dial lowpassDial;
+    viator_gui::Dial trimDial;
+    viator_gui::Dial mixFader;
     
     viator_gui::ToggleButton osButton;
     viator_gui::ToggleButton phaseButton;

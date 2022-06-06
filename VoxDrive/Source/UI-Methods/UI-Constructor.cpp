@@ -24,13 +24,11 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     driveAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputID, driveDial);
     
     addAndMakeVisible(rangeDial);
-    rangeDial.setLabelAsInt(true);
     rangeDial.addListener(this);
     rangeDial.addMouseListener(this, false);
     rangeAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, rangeDial);
     
     addAndMakeVisible(lowpassDial);
-    lowpassDial.setLabelAsInt(true);
     lowpassDial.addListener(this);
     lowpassDial.addMouseListener(this, false);
     lowpassAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
