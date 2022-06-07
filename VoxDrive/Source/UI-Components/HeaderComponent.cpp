@@ -71,13 +71,13 @@ void HeaderComponent::resized()
     auto buttonTopMargin = getHeight() * 0.125f;
     auto buttonWidth = getHeight() * 0.75;
     auto buttonHeight = getHeight() * 0.75;
-    auto spaceBetween = 1.25;
+    auto spaceBetween = 1.7f;
 
     cpuLabel.setFont(juce::Font ("Helvetica", getHeight() * 0.35f, juce::Font::FontStyleFlags::bold));
     cpuTitleLabel.setFont(juce::Font ("Helvetica", getHeight() * 0.35f, juce::Font::FontStyleFlags::bold));
     settingsButton.setBounds(rightMargin, buttonTopMargin, buttonWidth, buttonHeight);
-    cpuLabel.setBounds(settingsButton.getX() - settingsButton.getWidth() * spaceBetween, buttonTopMargin, buttonWidth, buttonHeight);
-    cpuTitleLabel.setBounds(cpuLabel.getX() - cpuLabel.getWidth() * spaceBetween * 1.15f, buttonTopMargin, buttonWidth * 1.5f, buttonHeight);
+    cpuLabel.setBounds(settingsButton.getX() - settingsButton.getWidth() * spaceBetween, buttonTopMargin, buttonWidth * 1.5f, buttonHeight);
+    cpuTitleLabel.setBounds(cpuLabel.getX() - cpuLabel.getWidth() * spaceBetween * 0.55f, buttonTopMargin, buttonWidth * 1.5f, buttonHeight);
 }
 
 bool HeaderComponent::getSettingsButtonToggleState()

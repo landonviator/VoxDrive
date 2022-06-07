@@ -22,20 +22,25 @@ void VoxDriveAudioProcessorEditor::uiResized()
     
     //Dials
     auto rightMargin = getWidth() * 0.73f;
-    auto dialTopMargin = getHeight() * 0.25f;
-    auto dialSize = getWidth() * 0.12f;
-    auto spaceBetwween = 1.25f;
+    auto dialTopMargin = getHeight() * 0.23f;
+    auto dialSize = getWidth() * 0.15f;
+    auto spaceBetwween = 1.1f;
     
-    rangeDial.setBounds(rightMargin, dialTopMargin, dialSize, dialSize);
+    rangeDial.setBounds(rightMargin * 1.06f, dialTopMargin, dialSize, dialSize);
     auto space1 = rangeDial.getY() + rangeDial.getHeight() * spaceBetwween;
-    lowpassDial.setBounds(rightMargin, space1, dialSize, dialSize);
+    lowpassDial.setBounds(rightMargin * 0.9f, space1, dialSize, dialSize);
     auto space2 = lowpassDial.getY() + lowpassDial.getHeight() * spaceBetwween;
-    trimDial.setBounds(rightMargin, space2, dialSize, dialSize);
+    trimDial.setBounds(rangeDial.getX(), space2, dialSize, dialSize);
+    
+    driveDialLabel.setSize(driveDial.getWidth(), driveDial.getHeight() * 0.2);
+    rangeDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
+    lowpassDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
+    trimDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
+    mixFaderLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
 
     //Mix fader
     auto x = getWidth() * 0.425f;
     auto y = getHeight() * 0.69f;
-    dialSize *= 1.25;
     mixFader.setBounds(x, y, dialSize, dialSize);
     
     //Buttons

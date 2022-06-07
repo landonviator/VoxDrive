@@ -23,6 +23,11 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     osButton.updateLabelColor(masterColor);
     phaseButton.updateLabelColor(masterColor);
     
+    for (int i = 0; i < labels.size(); ++i)
+    {
+        labels[i]->updateLabelColor(masterColor);
+    }
+    
     //Circuit
     auto circuitScale = 0.4f;
     auto circuit = juce::ImageCache::getFromMemory(BinaryData::VoxDriveCircuit_png, BinaryData::VoxDriveCircuit_pngSize);

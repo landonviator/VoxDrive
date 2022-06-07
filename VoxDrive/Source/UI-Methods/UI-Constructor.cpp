@@ -17,6 +17,12 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     setName("Editor");
     
+    for (int i = 0; i < labels.size(); ++i)
+    {
+        addAndMakeVisible(labels[i]);
+        labels[i]->attachToComponent(sliders[i], false);
+    }
+    
     //Dials
     addAndMakeVisible(driveDial);
     driveDial.addListener(this);
@@ -26,11 +32,16 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     addAndMakeVisible(rangeDial);
     rangeDial.addListener(this);
     rangeDial.addMouseListener(this, false);
+    rangeDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
+    rangeDial.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
     rangeAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, rangeDial);
     
     addAndMakeVisible(lowpassDial);
     lowpassDial.addListener(this);
     lowpassDial.addMouseListener(this, false);
+    lowpassDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::orange.darker(0.5));
+    lowpassDial.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange.darker(0.5).withAlpha(0.5f));
+    lowpassDial.setColour(juce::Slider::ColourIds::backgroundColourId, juce::Colours::black.brighter(0.1).withAlpha(0.8f));
     lowpassAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
     
     addAndMakeVisible(trimDial);

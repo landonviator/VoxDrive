@@ -65,6 +65,12 @@ private:
     viator_gui::ToggleButton osButton;
     viator_gui::ToggleButton phaseButton;
     
+    viator_gui::Label driveDialLabel {true, "Drive"};
+    viator_gui::Label rangeDialLabel {true, "Range"};
+    viator_gui::Label lowpassDialLabel {true, "Lowpass"};
+    viator_gui::Label trimDialLabel {true, "Trim"};
+    viator_gui::Label mixFaderLabel {true, "Mix"};
+    
     bool imageAlphaChanged = false;
     
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> driveAttach;
@@ -119,6 +125,7 @@ private:
     
     std::vector<juce::ImageButton*> buttons = {&osButton, &phaseButton};
     std::vector<juce::String> buttonLabels = {hqToolTip, phaseToolTip};
-
+    
+    std::vector<viator_gui::Label*> labels = {&driveDialLabel, &rangeDialLabel, &lowpassDialLabel, &trimDialLabel, &mixFaderLabel};
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };
