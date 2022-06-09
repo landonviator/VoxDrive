@@ -14,9 +14,10 @@ VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcess
 : AudioProcessorEditor (&p), audioProcessor (p), headerComponent(audioProcessor)
 , settingsPage(audioProcessor)
 , driveDial(" dB", "Drive", 0.0, 50.0, 0.01, 0.0)
-, rangeDial(" Hz", "Range", 500.0, 20000.0, 1.0, 500.0)
+, rangeDial(" Hz", "Range", 500.0, 20000.0, 0.0, 500.0)
 , lowpassDial(" Hz", "LP", 1000.0, 20000.0, 1.0, 1000.0)
 , trimDial(" dB", "Trim", -24.0, 24.0, 0.01, 0.0)
+, outDial(" dB", "Output", -24.0, 24.0, 0.01, 0.0)
 , mixFader(" %", "Mix", 0.0, 100.0, 1.0, 0.0)
 , osButton(true, "HQ")
 , phaseButton(true, "Phase")
@@ -26,6 +27,17 @@ VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcess
 
 VoxDriveAudioProcessorEditor::~VoxDriveAudioProcessorEditor()
 {
+    //sliders
+    for (int i = 0; i < sliders.size(); ++i)
+    {
+        sliders[i]->setLookAndFeel(nullptr);
+    }
+    
+    //buttons
+    for (int i = 0; i < buttons.size(); ++i)
+    {
+        buttons[i]->setLookAndFeel(nullptr);
+    }
 }
 
 //==============================================================================

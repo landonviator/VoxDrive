@@ -49,6 +49,11 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     trimDial.addMouseListener(this, false);
     trimAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimID, trimDial);
     
+    addAndMakeVisible(outDial);
+    outDial.addListener(this);
+    outDial.addMouseListener(this, false);
+    outAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, outputID, outDial);
+    
     addAndMakeVisible(mixFader);
     mixFader.addListener(this);
     mixFader.addMouseListener(this, false);
@@ -71,6 +76,4 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     tooltipContent.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke.withAlpha(0.5f));
     tooltipContent.setJustificationType(juce::Justification::horizontallyCentred);
     tooltipContent.setFont(juce::Font ("Helvetica", getHeight() * 0.02f, juce::Font::FontStyleFlags::bold));
-
-    
 }

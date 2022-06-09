@@ -19,6 +19,7 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     rangeDial.updateLabelColor(masterColor);
     lowpassDial.updateLabelColor(masterColor);
     trimDial.updateLabelColor(masterColor);
+    outDial.updateLabelColor(masterColor);
     mixFader.updateLabelColor(masterColor);
     osButton.updateLabelColor(masterColor);
     phaseButton.updateLabelColor(masterColor);

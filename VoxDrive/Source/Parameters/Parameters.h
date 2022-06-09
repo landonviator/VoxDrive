@@ -15,6 +15,9 @@
 #define trimID  "trim"
 #define trimName  "Trim"
 
+#define outputID  "output"
+#define outputName  "Output"
+
 #define phaseID  "phase"
 #define phaseName  "Phase"
 

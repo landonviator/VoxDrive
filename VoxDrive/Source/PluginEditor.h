@@ -60,6 +60,7 @@ private:
     viator_gui::Dial rangeDial;
     viator_gui::Dial lowpassDial;
     viator_gui::Dial trimDial;
+    viator_gui::Dial outDial;
     viator_gui::Dial mixFader;
     
     viator_gui::ToggleButton osButton;
@@ -69,6 +70,7 @@ private:
     viator_gui::Label rangeDialLabel {true, "Range"};
     viator_gui::Label lowpassDialLabel {true, "Lowpass"};
     viator_gui::Label trimDialLabel {true, "Trim"};
+    viator_gui::Label outDialLabel {true, "Output"};
     viator_gui::Label mixFaderLabel {true, "Mix"};
     
     bool imageAlphaChanged = false;
@@ -77,6 +79,7 @@ private:
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> rangeAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> lowpassAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> trimAttach;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> outAttach;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> mixAttach;
     
     std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> hqAttach;
@@ -84,12 +87,12 @@ private:
     
     juce::String driveToolTip =
     {
-        "This knob drives the input harder into the exciter circuit, which gives you mid and upper range harmonic distortion. Increasing the drive also increases a hard-coded low shelf."
+        "This knob drives the input harder into the exciter circuit, which makes mid and upper range harmonic distortion. \nIncreasing the drive also boosts a hard-coded low-shelf EQ to compensate for perceived low-end loss."
     };
     
     juce::String rangeToolTip =
     {
-        "This knob sets the range of frequencies affected by the harmonic distortion."
+        "This knob sets the cutoff of frequencies affected by the harmonic distortion. Any frequencies above this cutoff are affected by harmonic distortion."
     };
     
     juce::String lowpassToolTip =
@@ -99,7 +102,12 @@ private:
     
     juce::String trimToolTip =
     {
-        "A master output volume control."
+        "A volume control for the wet signal only."
+    };
+    
+    juce::String outToolTip =
+    {
+        "A master output volume control for the entire plugin's output."
     };
     
     juce::String mixToolTip =
@@ -114,18 +122,18 @@ private:
     
     juce::String phaseToolTip =
     {
-        "This flips the phase of your audio."
+        "This flips the polarity of the audio."
     };
     
     juce::Rectangle<float> tooltipWindow;
     juce::Label tooltipContent;
     
-    std::vector<juce::Slider*> sliders = {&driveDial, &rangeDial, &lowpassDial, &trimDial, &mixFader};
-    std::vector<juce::String> sliderLabels = {driveToolTip, rangeToolTip, lowpassToolTip, trimToolTip, mixToolTip};
+    std::vector<juce::Slider*> sliders = {&driveDial, &rangeDial, &lowpassDial, &trimDial, &outDial, &mixFader};
+    std::vector<juce::String> sliderLabels = {driveToolTip, rangeToolTip, lowpassToolTip, trimToolTip, outToolTip, mixToolTip};
     
     std::vector<juce::ImageButton*> buttons = {&osButton, &phaseButton};
     std::vector<juce::String> buttonLabels = {hqToolTip, phaseToolTip};
     
-    std::vector<viator_gui::Label*> labels = {&driveDialLabel, &rangeDialLabel, &lowpassDialLabel, &trimDialLabel, &mixFaderLabel};
+    std::vector<viator_gui::Label*> labels = {&driveDialLabel, &rangeDialLabel, &lowpassDialLabel, &trimDialLabel, &outDialLabel, &mixFaderLabel};
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessorEditor)
 };

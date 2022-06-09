@@ -71,12 +71,16 @@ public:
 private:
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;
+    using Parameter = juce::AudioProcessorValueTreeState::Parameter;
+    static juce::String valueToTextFunction(float x) { return juce::String(x, 0); }
+    static float textToValueFunction(const juce::String& str) { return static_cast<int>(str.getFloatValue()); }
     
     /** DSP */
     VoxDistortion<float> voxDistortionModule;
     juce::dsp::Oversampling<float> oversamplingModule;
     juce::dsp::ProcessSpec spec;
     viator_dsp::SVFilter<float> lowShelf;
+    juce::dsp::Gain<float> outModule;
     
     juce::AudioProcessLoadMeasurer cpuMeasureModule;
     std::atomic<float> cpuLoad;

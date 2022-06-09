@@ -21,27 +21,28 @@ void VoxDriveAudioProcessorEditor::uiResized()
     setSettingsPageBounds();
     
     //Dials
-    auto rightMargin = getWidth() * 0.73f;
-    auto dialTopMargin = getHeight() * 0.23f;
+    auto rightMargin = getWidth() * 0.715f;
+    auto dialTopMargin = getHeight() * 0.225f;
     auto dialSize = getWidth() * 0.15f;
-    auto spaceBetwween = 1.1f;
+    auto spaceBetwween = 1.15f;
     
-    rangeDial.setBounds(rightMargin * 1.06f, dialTopMargin, dialSize, dialSize);
-    auto space1 = rangeDial.getY() + rangeDial.getHeight() * spaceBetwween;
-    lowpassDial.setBounds(rightMargin * 0.9f, space1, dialSize, dialSize);
-    auto space2 = lowpassDial.getY() + lowpassDial.getHeight() * spaceBetwween;
-    trimDial.setBounds(rangeDial.getX(), space2, dialSize, dialSize);
+    mixFader.setBounds(rightMargin, dialTopMargin, dialSize, dialSize);
+    auto space1 = mixFader.getY() + mixFader.getHeight() * spaceBetwween;
+    trimDial.setBounds(rightMargin, space1, dialSize, dialSize);
+    auto space2 = trimDial.getY() + trimDial.getHeight() * spaceBetwween;
+    outDial.setBounds(rightMargin, space2, dialSize, dialSize);
+    
+    auto x = getWidth() * 0.35f;
+    auto y = getHeight() * 0.69f;
+    rangeDial.setBounds(x, y, dialSize, dialSize);
+    lowpassDial.setBounds(rangeDial.getX() + rangeDial.getWidth(), y, dialSize, dialSize);
     
     driveDialLabel.setSize(driveDial.getWidth(), driveDial.getHeight() * 0.2);
     rangeDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
     lowpassDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
     trimDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
+    outDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
     mixFaderLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
-
-    //Mix fader
-    auto x = getWidth() * 0.425f;
-    auto y = getHeight() * 0.69f;
-    mixFader.setBounds(x, y, dialSize, dialSize);
     
     //Buttons
     auto leftButtonMargin = getWidth() * 0.095f;

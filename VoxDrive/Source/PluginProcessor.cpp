@@ -29,6 +29,7 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(mixID, this);
     treeState.addParameterListener(lowpassID, this);
     treeState.addParameterListener(trimID, this);
+    treeState.addParameterListener(outputID, this);
     treeState.addParameterListener(phaseID, this);
     treeState.addParameterListener(hqID, this);
     
@@ -43,6 +44,7 @@ VoxDriveAudioProcessor::~VoxDriveAudioProcessor()
     treeState.removeParameterListener(mixID, this);
     treeState.removeParameterListener(lowpassID, this);
     treeState.removeParameterListener(trimID, this);
+    treeState.removeParameterListener(outputID, this);
     treeState.removeParameterListener(phaseID, this);
     treeState.removeParameterListener(hqID, this);
 }
@@ -52,10 +54,11 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
         
     auto pInput = std::make_unique<juce::AudioParameterFloat>(inputID, inputName, 0.0f, 50.0f, 0.0f);
-    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.2), 500.0f);
+    auto pCutoff = std::make_unique<juce::AudioParameterFloat>(cutoffID, cutoffName, juce::NormalisableRange<float>(500.0f, 20000.0f, 1.0f, 0.5), 500.0f);
     auto pMix = std::make_unique<juce::AudioParameterInt>(mixID, mixName, 0, 100, 100);
     auto pLowpass = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.5), 20000.0f);
     auto pTrim = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
+    auto pOutput = std::make_unique<juce::AudioParameterFloat>(outputID, outputName, -24.0f, 24.0f, 0.0f);
     auto pPhase = std::make_unique<juce::AudioParameterBool>(phaseID, phaseName, false);
     auto pHQ = std::make_unique<juce::AudioParameterBool>(hqID, hqName, false);
     
@@ -64,6 +67,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout VoxDriveAudioProcessor::crea
     params.push_back(std::move(pMix));
     params.push_back(std::move(pLowpass));
     params.push_back(std::move(pTrim));
+    params.push_back(std::move(pOutput));
     params.push_back(std::move(pPhase));
     params.push_back(std::move(pHQ));
     
@@ -80,6 +84,7 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
             spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
             lowShelf.prepare(spec);
             voxDistortionModule.prepare(spec);
+            outModule.prepare(spec);
             cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
         }
 
@@ -88,6 +93,7 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
             spec.sampleRate = getSampleRate();
             lowShelf.prepare(spec);
             voxDistortionModule.prepare(spec);
+            outModule.prepare(spec);
             cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
         }
     }
@@ -119,6 +125,9 @@ void VoxDriveAudioProcessor::updateParameters()
     voxDistortionModule.setLPCutoff(treeState.getRawParameterValue(lowpassID)->load());
     voxDistortionModule.setTrim(treeState.getRawParameterValue(trimID)->load() - treeState.getRawParameterValue(inputID)->load() * 0.5f);
     voxDistortionModule.setPhase(treeState.getRawParameterValue(phaseID)->load());
+    
+    outModule.setRampDurationSeconds(0.02);
+    outModule.setGainDecibels(treeState.getRawParameterValue(outputID)->load());
 }
 
 //==============================================================================
@@ -210,6 +219,7 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     
     lowShelf.prepare(spec);
     voxDistortionModule.prepare(spec);
+    outModule.prepare(spec);
     updateParameters();
     
     cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
@@ -250,8 +260,6 @@ bool VoxDriveAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts)
 void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
 
     juce::AudioProcessLoadMeasurer::ScopedTimer s(cpuMeasureModule);
 
@@ -265,6 +273,7 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         lowShelf.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         oversamplingModule.processSamplesDown(audioBlock);
+        outModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     }
 
     // Don't Oversample if OFF
@@ -272,6 +281,7 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     {
         lowShelf.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
         voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+        outModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     }
     
     
@@ -292,7 +302,6 @@ bool VoxDriveAudioProcessor::hasEditor() const
 juce::AudioProcessorEditor* VoxDriveAudioProcessor::createEditor()
 {
     return new VoxDriveAudioProcessorEditor (*this);
-    //return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================
