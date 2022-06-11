@@ -16,7 +16,7 @@
 //==============================================================================
 /**
 */
-class VoxDriveAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Slider::Listener
+class VoxDriveAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
 public:
     VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor&);
@@ -25,10 +25,6 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
-    
-    void sliderValueChanged(juce::Slider* slider) override;
-    void sliderDragStarted (juce::Slider* slider) override;
-    void sliderDragEnded (juce::Slider*) override;
     
     void mouseEnter(const juce::MouseEvent &event) override;
     void mouseExit(const juce::MouseEvent &event) override;
@@ -54,7 +50,6 @@ private:
     //Settings Page
     SettingsPage settingsPage;
     void setSettingsPageBounds();
-    juce::ComponentAnimator settingsPageAnimator;
     
     viator_gui::Dial driveDial;
     viator_gui::Dial rangeDial;

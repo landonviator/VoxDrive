@@ -6,7 +6,7 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     
     auto scale = 0.85f;
     auto leftMargin = getWidth() * (1.0 - scale) * 0.5;
-    auto topMargin = getHeight() * (1.0 - scale * 0.9f) * 0.5;
+    auto topMargin = getHeight() * (1.0 - scale * 0.9) * 0.5;
     
     //Init color
     masterColor = juce::Colour::fromString(audioProcessor.variableTree.getProperty("mastercolor").toString());
@@ -50,6 +50,6 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
         getWidth() * 0.59006f * circuitScale,
         getWidth() * circuitScale,
         juce::RectanglePlacement::stretchToFit
-     );
+    );
     
 }

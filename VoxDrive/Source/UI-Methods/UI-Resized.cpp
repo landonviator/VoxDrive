@@ -36,7 +36,8 @@ void VoxDriveAudioProcessorEditor::uiResized()
     auto y = getHeight() * 0.69f;
     rangeDial.setBounds(x, y, dialSize, dialSize);
     lowpassDial.setBounds(rangeDial.getX() + rangeDial.getWidth(), y, dialSize, dialSize);
-    
+    driveDial.setBounds(getLocalBounds().withSizeKeepingCentre(getWidth() * 0.25, getWidth() * 0.25).withY(getWidth() * 0.18f));
+
     driveDialLabel.setSize(driveDial.getWidth(), driveDial.getHeight() * 0.2);
     rangeDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
     lowpassDialLabel.setSize(rangeDial.getWidth(), rangeDial.getHeight() * 0.2);
@@ -71,6 +72,4 @@ void VoxDriveAudioProcessorEditor::setSettingsPageBounds()
     auto settingsPageOutBounds = juce::Rectangle<float>(getWidth(), topMargin, settingsWidth, settingsHeight).toNearestInt();
     
     headerComponent.getSettingsButtonToggleState() ? settingsPage.setBounds(settingsPageBounds) : settingsPage.setBounds(settingsPageOutBounds);
-    
-    driveDial.setBounds(getLocalBounds().withSizeKeepingCentre(getWidth() * 0.25, getWidth() * 0.25).withY(getWidth() * 0.18f));
 }

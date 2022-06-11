@@ -1,8 +1,6 @@
 #pragma once
 #include <JuceHeader.h>
-#include "../LookAndFeel/MenuSliderLAF.h"
 #include "../LookAndFeel/ToggleButtonLAF.h"
-#include "../LookAndFeel/LabelLAF.h"
 #include "../LookAndFeel/ColorButtonLAF.h"
 #include "../Globals.h"
 #include "SettingsComps/MasterColorComp.h"
@@ -24,15 +22,10 @@ private:
     
     VoxDriveAudioProcessor& audioProcessor;
     
-    juce::Slider menuSlider1;
-    MenuSliderLAF customMenuSlider;
-    
     MasterColorComp masterColorComp;
     DiscordComp discordComp;
     PatreonComp patreonComp;
     TwitchComp twitchComp;
-    
-    LabelLAF customLabelLAF;
     
     float rowheight;
     

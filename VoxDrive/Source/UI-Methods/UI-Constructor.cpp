@@ -15,8 +15,6 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     // Window
     initWindow();
     
-    setName("Editor");
-    
     for (int i = 0; i < labels.size(); ++i)
     {
         addAndMakeVisible(labels[i]);
@@ -25,37 +23,34 @@ void VoxDriveAudioProcessorEditor::uiConstructor()
     
     //Dials
     addAndMakeVisible(driveDial);
-    driveDial.addListener(this);
     driveDial.addMouseListener(this, false);
+    driveDial.forceShadow();
     driveAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputID, driveDial);
     
     addAndMakeVisible(rangeDial);
-    rangeDial.addListener(this);
     rangeDial.addMouseListener(this, false);
     rangeDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
     rangeDial.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
+    rangeDial.forceShadow();
     rangeAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, cutoffID, rangeDial);
     
     addAndMakeVisible(lowpassDial);
-    lowpassDial.addListener(this);
     lowpassDial.addMouseListener(this, false);
     lowpassDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::orange.darker(0.5));
     lowpassDial.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange.darker(0.5).withAlpha(0.5f));
     lowpassDial.setColour(juce::Slider::ColourIds::backgroundColourId, juce::Colours::black.brighter(0.1).withAlpha(0.8f));
+    lowpassDial.forceShadow();
     lowpassAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lowpassDial);
     
     addAndMakeVisible(trimDial);
-    trimDial.addListener(this);
     trimDial.addMouseListener(this, false);
     trimAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimID, trimDial);
     
     addAndMakeVisible(outDial);
-    outDial.addListener(this);
     outDial.addMouseListener(this, false);
     outAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, outputID, outDial);
     
     addAndMakeVisible(mixFader);
-    mixFader.addListener(this);
     mixFader.addMouseListener(this, false);
     mixAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, mixID, mixFader);
     
