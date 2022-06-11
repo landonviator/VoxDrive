@@ -5,28 +5,15 @@
 
 HeaderComponent::HeaderComponent(VoxDriveAudioProcessor& p) : audioProcessor(p)
 {
-    startTimerHz(1);
     setName("Header Page");
     
     addAndMakeVisible(settingsButton);
     settingsButtonProps();
-    
-//    addAndMakeVisible(cpuLabel);
-//    cpuLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke);
-//    cpuLabel.setColour(juce::Label::ColourIds::backgroundColourId, juce::Colours::transparentBlack);
-//    cpuLabel.setLookAndFeel(&customLabelLAF);
-//
-//    addAndMakeVisible(cpuTitleLabel);
-//    cpuTitleLabel.setText("CPU", juce::dontSendNotification);
-//    cpuTitleLabel.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke);
-//    cpuTitleLabel.setColour(juce::Label::ColourIds::backgroundColourId, juce::Colours::transparentBlack);
-//    cpuTitleLabel.setJustificationType(juce::Justification::centred);
 }
 
 HeaderComponent::~HeaderComponent()
 {
-    stopTimer();
-    cpuLabel.setLookAndFeel(nullptr);
+
 }
 
 void HeaderComponent::paint (juce::Graphics& g)
@@ -73,11 +60,7 @@ void HeaderComponent::resized()
     auto buttonHeight = getHeight() * 0.75;
     auto spaceBetween = 1.7f;
 
-    cpuLabel.setFont(juce::Font ("Helvetica", getHeight() * 0.35f, juce::Font::FontStyleFlags::bold));
-    cpuTitleLabel.setFont(juce::Font ("Helvetica", getHeight() * 0.35f, juce::Font::FontStyleFlags::bold));
     settingsButton.setBounds(rightMargin, buttonTopMargin, buttonWidth, buttonHeight);
-    cpuLabel.setBounds(settingsButton.getX() - settingsButton.getWidth() * spaceBetween, buttonTopMargin, buttonWidth * 1.5f, buttonHeight);
-    cpuTitleLabel.setBounds(cpuLabel.getX() - cpuLabel.getWidth() * spaceBetween * 0.55f, buttonTopMargin, buttonWidth * 1.5f, buttonHeight);
 }
 
 bool HeaderComponent::getSettingsButtonToggleState()
