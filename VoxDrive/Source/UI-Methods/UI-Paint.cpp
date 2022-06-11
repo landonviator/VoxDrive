@@ -33,8 +33,14 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
     auto circuitScale = 0.4f;
     auto circuit = juce::ImageCache::getFromMemory(BinaryData::VoxDriveCircuit_png, BinaryData::VoxDriveCircuit_pngSize);
     
-    if (!imageAlphaChanged) circuit.multiplyAllAlphas(0.3f);
-    imageAlphaChanged = true;
+    imageAlphaChanged = audioProcessor.variableTree.getProperty("alpha");
+    
+    if (!imageAlphaChanged)
+    {
+        circuit.multiplyAllAlphas(0.3f);
+        imageAlphaChanged = true;
+        audioProcessor.variableTree.setProperty("alpha", imageAlphaChanged, nullptr);
+    }
     
     g.drawImageWithin
     (
@@ -45,4 +51,5 @@ void VoxDriveAudioProcessorEditor::uiPaint(juce::Graphics &g)
         getWidth() * circuitScale,
         juce::RectanglePlacement::stretchToFit
      );
+    
 }

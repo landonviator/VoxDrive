@@ -22,12 +22,12 @@ void VoxDriveAudioProcessorEditor::initWindow()
     
     if (r.getWidth() <= 1920)
     {
-        width = x * 0.6;
+        width = x * 0.5;
     }
     
     else
     {
-        width = x * 0.5;
+        width = x * 0.4;
     }
     
     auto height = width * 0.7;

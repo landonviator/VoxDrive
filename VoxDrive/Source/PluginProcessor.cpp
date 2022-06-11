@@ -34,6 +34,7 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     treeState.addParameterListener(hqID, this);
     
     variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
+    variableTree.setProperty("alpha", false, nullptr);
     cpuLoad.store(0.0f);
 }
 
@@ -326,6 +327,7 @@ void VoxDriveAudioProcessor::setStateInformation (const void* data, int sizeInBy
         // Window Size
         windowWidth = variableTree.getProperty("width");
         windowHeight = variableTree.getProperty("height");
+        variableTree.setProperty("alpha", false, nullptr);
     }
 }
 
