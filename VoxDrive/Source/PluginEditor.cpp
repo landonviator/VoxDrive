@@ -11,7 +11,8 @@
 
 //==============================================================================
 VoxDriveAudioProcessorEditor::VoxDriveAudioProcessorEditor (VoxDriveAudioProcessor& p)
-: AudioProcessorEditor (&p), audioProcessor (p), headerComponent(audioProcessor)
+: AudioProcessorEditor (&p), audioProcessor (p)
+, headerComponent(audioProcessor)
 , settingsPage(audioProcessor)
 , driveDial(" dB", "Drive", 0.0, 50.0, 0.01, 0.0)
 , rangeDial(" Hz", "Range", 500.0, 20000.0, 0.0, 500.0)
@@ -30,7 +31,7 @@ VoxDriveAudioProcessorEditor::~VoxDriveAudioProcessorEditor()
     //sliders
     for (int i = 0; i < sliders.size(); ++i)
     {
-        sliders[i]->setLookAndFeel(nullptr);
+       sliders[i]->setLookAndFeel(nullptr);
     }
     
     //buttons
@@ -49,20 +50,6 @@ void VoxDriveAudioProcessorEditor::paint (juce::Graphics& g)
 void VoxDriveAudioProcessorEditor::resized()
 {
     uiResized();
-}
-
-void VoxDriveAudioProcessorEditor::sliderValueChanged(juce::Slider *slider)
-{
-}
-
-void VoxDriveAudioProcessorEditor::sliderDragStarted(juce::Slider* slider)
-{
-    headerComponent.setUIInUse(true);
-}
-
-void VoxDriveAudioProcessorEditor::sliderDragEnded(juce::Slider*)
-{
-    headerComponent.setUIInUse(false);
 }
 
 void VoxDriveAudioProcessorEditor::mouseEnter(const juce::MouseEvent &event)

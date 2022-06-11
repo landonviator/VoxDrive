@@ -65,9 +65,7 @@ public:
     void updateParameters();
     
     juce::AudioProcessorValueTreeState treeState;
-    
-    float getCPULoad();
-    
+        
 private:
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;
@@ -82,8 +80,6 @@ private:
     viator_dsp::SVFilter<float> lowShelf;
     juce::dsp::Gain<float> outModule;
     
-    juce::AudioProcessLoadMeasurer cpuMeasureModule;
-    std::atomic<float> cpuLoad;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxDriveAudioProcessor)
 };

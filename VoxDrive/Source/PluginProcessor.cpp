@@ -35,7 +35,6 @@ VoxDriveAudioProcessor::VoxDriveAudioProcessor()
     
     variableTree.setProperty("mastercolor", juce::Colours::black.toString(), nullptr);
     variableTree.setProperty("alpha", false, nullptr);
-    cpuLoad.store(0.0f);
 }
 
 VoxDriveAudioProcessor::~VoxDriveAudioProcessor()
@@ -86,7 +85,6 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
             lowShelf.prepare(spec);
             voxDistortionModule.prepare(spec);
             outModule.prepare(spec);
-            cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
         }
 
         else
@@ -95,7 +93,6 @@ void VoxDriveAudioProcessor::parameterChanged(const juce::String &parameterID, f
             lowShelf.prepare(spec);
             voxDistortionModule.prepare(spec);
             outModule.prepare(spec);
-            cpuMeasureModule.reset(spec.sampleRate, spec.maximumBlockSize);
         }
     }
     
@@ -204,13 +201,11 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     if (treeState.getRawParameterValue(hqID)->load())
     {
         spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
-        cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
     }
 
     else
     {
         spec.sampleRate = getSampleRate();
-        cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
     }
     
     // Initialize spec for dsp modules
@@ -222,8 +217,6 @@ void VoxDriveAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     voxDistortionModule.prepare(spec);
     outModule.prepare(spec);
     updateParameters();
-    
-    cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
 }
 
 void VoxDriveAudioProcessor::releaseResources()
@@ -262,7 +255,6 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
 {
     juce::ScopedNoDenormals noDenormals;
 
-    juce::AudioProcessLoadMeasurer::ScopedTimer s(cpuMeasureModule);
 
     juce::dsp::AudioBlock<float> audioBlock {buffer};
     juce::dsp::AudioBlock<float> upSampledBlock (buffer);
@@ -284,14 +276,6 @@ void VoxDriveAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         voxDistortionModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
         outModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     }
-    
-    
-    cpuLoad.store(cpuMeasureModule.getLoadAsPercentage());
-}
-
-float VoxDriveAudioProcessor::getCPULoad()
-{
-    return cpuLoad.load();
 }
 
 //==============================================================================
