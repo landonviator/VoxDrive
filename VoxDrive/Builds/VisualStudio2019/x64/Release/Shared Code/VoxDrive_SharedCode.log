@@ -22,262 +22,105 @@
   PluginProcessor.cpp
   PluginEditor.cpp
   BinaryData.cpp
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\Globals.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\Globals.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Globals.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Globals.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\DiscordComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsComps\DiscordComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\DiscordComp.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\DiscordComp.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(26,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(26,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(26,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(26,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\SettingsButtonLAF.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(29,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(29,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(29,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\DiscordComp.cpp(29,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(54,31): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(60,77): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(65,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(64,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(61,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(12,71): warning C4100: 'style': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(11,45): warning C4100: 'maxSliderPos': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(10,45): warning C4100: 'minSliderPos': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\SettingsButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(15,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(18,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(35,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(36,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(37,74): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(38,71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(39,71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(44,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(44,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(44,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(44,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(53,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(53,59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(53,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(53,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,117): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,104): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(58,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(58,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(69,95): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(69,80): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(69,54): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(70,95): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(70,80): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(70,65): warning C4244: 'argument': conversion from 'int' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(74,94): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=int
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(74,75): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=int
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(74,119): warning C4244: 'argument': conversion from 'float' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=int
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\SettingsButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\SettingsButtonLAF.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\SettingsButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\SettingsButtonLAF.cpp(31,70): warning C4244: 'argument': conversion from 'ValueType' to 'int', possible loss of data
           with
           [
               ValueType=float
           ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(9,22): warning C4458: declaration of 'topMargin' hides class member
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginEditor.h(49,11): message : see declaration of 'VoxDriveAudioProcessorEditor::topMargin' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\SettingsButtonLAF.cpp(31,50): warning C4244: 'argument': conversion from 'ValueType' to 'int', possible loss of data
           with
           [
               ValueType=float
           ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(36,59): warning C4244: 'argument': conversion from 'int' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(36,46): warning C4244: 'argument': conversion from 'int' to 'ValueType', possible loss of data
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(46,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(45,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(44,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(43,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(56,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(56,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(56,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,30): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,127): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,119): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,128): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(9,22): warning C4458: declaration of 'topMargin' hides class member
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginEditor.h(49,11): message : see declaration of 'VoxDriveAudioProcessorEditor::topMargin' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(16,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(16,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(16,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(16,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(44,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(43,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(42,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(41,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(55,144): warning C4305: 'argument': truncation from 'double' to 'ValueType'
-          with
-          [
-              ValueType=float
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(73,86): warning C4100: 'newValue': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(173,53): warning C4100: 'index': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(177,64): warning C4100: 'index': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(182,80): warning C4100: 'newName': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(182,53): warning C4100: 'index': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(278,55): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(250,96): warning C4100: 'midiMessages': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(253,10): warning C4189: 'totalNumInputChannels': local variable is initialized but not referenced
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(254,10): warning C4189: 'totalNumOutputChannels': local variable is initialized but not referenced
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(25,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(30,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,91): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(42,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(42,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(47,25): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(45,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(44,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(43,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Paint.cpp(42,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\ToggleButtonLAF.cpp(34,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\ToggleButtonLAF.cpp(34,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\ToggleButtonLAF.cpp(33,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ColorButtonLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\MasterColorComp.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(131,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(131,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(131,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(131,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(134,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(134,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(134,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
@@ -316,46 +159,94 @@ C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsC
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(154,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(156,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(156,113): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(156,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\MasterColorComp.cpp(156,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-SaveWindow.cpp(22,46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-SaveWindow.cpp(23,48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Constructor.cpp(35,116): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Constructor.cpp(36,127): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Constructor.cpp(44,105): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\ToggleButtonLAF.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\ToggleButtonLAF.cpp(34,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\ToggleButtonLAF.cpp(34,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\ToggleButtonLAF.cpp(33,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\MenuSliderLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\HeaderComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\LookAndFeel\LabelLAF.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(36,59): warning C4244: 'argument': conversion from 'int' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(36,46): warning C4244: 'argument': conversion from 'int' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(46,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(45,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(44,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(54,31): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(43,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(60,77): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(65,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(64,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(61,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(52,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(56,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(56,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(12,71): warning C4100: 'style': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(56,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(11,45): warning C4100: 'maxSliderPos': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\LookAndFeel\MenuSliderLAF.cpp(10,45): warning C4100: 'minSliderPos': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(65,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(78,30): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,127): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,119): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(79,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,128): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(94): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\HeaderComponent.cpp(80,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\PluginEditor.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(64,38): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
           with
           [
@@ -382,46 +273,226 @@ C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(59)
               SampleType=float
           ] (compiling source file ..\..\Source\DSP\VoxDistortion.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(94): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginEditor.cpp(42,69): warning C4100: 'slider': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginEditor.cpp(46,68): warning C4100: 'slider': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsPage.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(27,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(28,69): warning C4244: 'argument': conversion from 'float' to 'ValueType', possible loss of data
           with
           [
               ValueType=int
           ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\Parameters\Parameters.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(33,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(35,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(35,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(36,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(37,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsPage.cpp(38,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-SaveWindow.cpp(22,46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-SaveWindow.cpp(23,48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginEditor.cpp(54,69): warning C4100: 'slider': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginEditor.cpp(58,68): warning C4100: 'slider': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(15,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(18,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(29,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(31,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(33,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(37,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(37,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(37,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(37,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(38,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(38,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(38,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(40,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(41,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(42,74): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(43,71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(44,70): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(45,71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(54,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(55,117): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(55,104): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(55,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(55,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(59,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(59,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(70,95): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(70,80): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(70,54): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(71,95): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(71,80): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(71,65): warning C4244: 'argument': conversion from 'int' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=float
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(75,94): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=int
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(75,75): warning C4244: 'argument': conversion from 'double' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=int
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-Resized.cpp(75,119): warning C4244: 'argument': conversion from 'float' to 'ValueType', possible loss of data
+          with
+          [
+              ValueType=int
+          ]
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\Buttons\SettingsButtonLogic.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\PatreonComp.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(25,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(30,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(26,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,91): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(37,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\PatreonComp.cpp(29,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(42,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(42,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Methods\UI-InitWindow.cpp(47,25): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(98,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76,106): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(22,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(21): message : while compiling class template member function 'void VoxDistortion<float>::prepare(juce::dsp::ProcessSpec &)'
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(60,57): warning C4244: 'argument': conversion from 'Type' to 'float', possible loss of data
+          with
+          [
+              Type=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(59): message : while compiling class template member function 'void VoxDistortion<double>::setDrive(SampleType)'
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(41): message : see reference to function template instantiation 'void VoxDistortion<double>::setDrive(SampleType)' being compiled
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(66,28): warning C4244: 'argument': conversion from 'SampleType' to 'float', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(65): message : while compiling class template member function 'void VoxDistortion<double>::setCutoff(SampleType)'
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(79,30): warning C4244: 'argument': conversion from 'SampleType' to 'float', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(78): message : while compiling class template member function 'void VoxDistortion<double>::setLPCutoff(SampleType)'
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(85,56): warning C4244: 'argument': conversion from 'Type' to 'float', possible loss of data
+          with
+          [
+              Type=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(84): message : while compiling class template member function 'void VoxDistortion<double>::setTrim(SampleType)'
+          with
+          [
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(77,86): warning C4100: 'newValue': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(182,53): warning C4100: 'index': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(186,64): warning C4100: 'index': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(191,80): warning C4100: 'newName': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(191,53): warning C4100: 'index': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(288,55): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(260,96): warning C4100: 'midiMessages': unreferenced formal parameter
+  BinaryData2.cpp
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\svfilter.h(77,75): warning C4244: 'argument': conversion from 'size_t' to 'SampleType', possible loss of data
           with
           [
               SampleType=float
           ] (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(265): message : see reference to function template instantiation 'void viator_dsp::SVFilter<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(273): message : see reference to function template instantiation 'void viator_dsp::SVFilter<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
           with
           [
               ProcessContext=juce::dsp::ProcessContextReplacing<float>
           ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(265): message : see reference to function template instantiation 'void viator_dsp::SVFilter<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(273): message : see reference to function template instantiation 'void viator_dsp::SVFilter<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
           with
           [
               ProcessContext=juce::dsp::ProcessContextReplacing<float>
@@ -472,18 +543,17 @@ C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\svfilter.h(1
               SampleType=float
           ] (compiling source file ..\..\Source\PluginProcessor.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(47,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(266): message : see reference to function template instantiation 'void VoxDistortion<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(274): message : see reference to function template instantiation 'void VoxDistortion<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
           with
           [
               ProcessContext=juce::dsp::ProcessContextReplacing<float>
           ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(266): message : see reference to function template instantiation 'void VoxDistortion<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.cpp(274): message : see reference to function template instantiation 'void VoxDistortion<float>::process<juce::dsp::ProcessContextReplacing<float>>(const ProcessContext &) noexcept' being compiled
           with
           [
               ProcessContext=juce::dsp::ProcessContextReplacing<float>
           ]
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(52,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
 C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(74,69): warning C4244: 'return': conversion from 'double' to 'SampleType', possible loss of data
           with
           [
@@ -499,7 +569,7 @@ C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.h(47)
           [
               SampleType=float
           ] (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(76): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\PluginProcessor.h(79): message : see reference to class template instantiation 'VoxDistortion<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\svfilter.h(120,29): warning C4244: 'argument': conversion from 'SampleType' to 'const unsigned __int64', possible loss of data
           with
           [
@@ -537,65 +607,6 @@ C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\svfilter.h(1
           [
               SampleType=float
           ] (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(54,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\SettingsComps\TwitchComp.cpp)
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(26,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\UI-Components\SettingsComps\TwitchComp.cpp(29,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(22,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(21): message : while compiling class template member function 'void VoxDistortion<float>::prepare(juce::dsp::ProcessSpec &)'
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(60,57): warning C4244: 'argument': conversion from 'Type' to 'float', possible loss of data
-          with
-          [
-              Type=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(59): message : while compiling class template member function 'void VoxDistortion<double>::setDrive(SampleType)'
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(41): message : see reference to function template instantiation 'void VoxDistortion<double>::setDrive(SampleType)' being compiled
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(66,28): warning C4244: 'argument': conversion from 'SampleType' to 'float', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(65): message : while compiling class template member function 'void VoxDistortion<double>::setCutoff(SampleType)'
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(79,30): warning C4244: 'argument': conversion from 'SampleType' to 'float', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(78): message : while compiling class template member function 'void VoxDistortion<double>::setLPCutoff(SampleType)'
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(85,56): warning C4244: 'argument': conversion from 'Type' to 'float', possible loss of data
-          with
-          [
-              Type=double
-          ]
-C:\Users\lando\Documents\GitHub\VoxDrive\VoxDrive\Source\DSP\VoxDistortion.cpp(84): message : while compiling class template member function 'void VoxDistortion<double>::setTrim(SampleType)'
-          with
-          [
-              SampleType=double
-          ]
-  BinaryData2.cpp
   include_juce_audio_basics.cpp
   include_juce_audio_devices.cpp
   include_juce_audio_formats.cpp
@@ -622,10 +633,8 @@ C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\Saturation.h
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\Saturation.cpp(69): message : see reference to class template instantiation 'viator_dsp::Saturation<float>' being compiled (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\LFOGenerator.cpp(5,22): warning C4244: '=': conversion from 'const double' to 'float', possible loss of data (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\LFOGenerator.cpp(47,96): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Dial.cpp(46,133): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Dial.cpp(44,60): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Dial.cpp(50,59): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Dial.cpp(65,102): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Dial.cpp(99,97): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.cpp(8,61): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.cpp(16,134): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.cpp(14,60): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\JuceLibraryCode\include_viator_modules.cpp)
