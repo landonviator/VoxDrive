@@ -47,7 +47,7 @@ void HeaderComponent::paint (juce::Graphics& g)
     float width = getWidth() * 0.15f;
     float height = getHeight() * 0.2f;
     g.setFont(juce::Font ("Helvetica", getWidth() * 0.02f, juce::Font::FontStyleFlags::bold));
-    g.drawFittedText("Vox Amp v1.2.0", x, y, width, height, juce::Justification::centred, 1);
+    g.drawFittedText("Vox Amp v1.3.0", x, y, width, height, juce::Justification::centred, 1);
 }
 
 void HeaderComponent::resized()
